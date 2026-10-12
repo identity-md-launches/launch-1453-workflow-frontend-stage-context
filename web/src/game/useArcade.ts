@@ -366,6 +366,11 @@ export function useArcade(config: Config) {
     publish();
   };
   const reset = () => {
+    if (
+      model.current.claimPending ||
+      model.current.verification === "uncertain"
+    )
+      return;
     stopPoll();
     remove("unfinished");
     model.current.phase = "menu";
@@ -385,6 +390,8 @@ export function useArcade(config: Config) {
       !m.session?.voucher
     )
       return;
+    // Bind all checks to the voucher that initiated this wallet request.
+    const voucher = m.session.voucher;
     m.claimPending = true;
     m.error = "";
     publish();
@@ -392,7 +399,7 @@ export function useArcade(config: Config) {
       const a = await account();
       const state = await refresh(a);
       if (a?.chainId !== config.deployment.chainId) throw Error("wrong chain");
-      const problem = voucherProblem(m.session.voucher, state, a);
+      const problem = voucherProblem(voucher, state, a);
       if (problem) {
         m.error = problem;
         return;
@@ -403,7 +410,7 @@ export function useArcade(config: Config) {
         await client.readContract({
           ...game,
           functionName: "claimed",
-          args: [m.session.voucher.session],
+          args: [voucher.session],
         })
       ) {
         m.verification = "paid";
@@ -429,7 +436,7 @@ export function useArcade(config: Config) {
         !(await client.readContract({
           ...game,
           functionName: "claimed",
-          args: [m.session.voucher.session],
+          args: [voucher.session],
         }))
       )
         throw Error("Reward confirmation failed");

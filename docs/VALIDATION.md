@@ -2,6 +2,8 @@
 
 This is worker-produced evidence, not an independent certification. The production export was built and exercised locally. No production claim, funding transfer, recovery, swap, publication or redeployment was broadcast.
 
+The reopened-review fixes and current checks are documented in [REVISION.md](REVISION.md), with before/after evidence under `validation/revision/`. The implementation-stage live RPC/contract observations and original visual captures below remain historical evidence; the revision does not claim those live checks were repeated. The browser and export audit reports are refreshed by the revision's final checks.
+
 ## Reproducible checks and results
 
 Commands were run from the repository root, except the explicitly noted unit reporter:

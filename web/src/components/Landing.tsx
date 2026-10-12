@@ -74,15 +74,6 @@ export function Landing({ config }: { config: Config }) {
               Free entry. Connect your wallet on Pepe2Pepe.
             </p>
           </div>
-          <div className="hero-caption">
-            <span className="crosshair" aria-hidden="true">
-              ＋
-            </span>
-            <div>
-              <span className="eyebrow">The cargo is hot.</span>
-              <span>Keep the rig moving.</span>
-            </div>
-          </div>
           <button
             className="motion-button"
             onClick={() => setMotion((v) => !v)}
@@ -102,7 +93,6 @@ export function Landing({ config }: { config: Config }) {
           aria-labelledby="mission-title"
         >
           <div className="section-intro">
-            <p className="eyebrow">One stolen core. A city on your tail.</p>
             <h2 id="mission-title">
               Make your
               <br />
@@ -211,12 +201,7 @@ export function Landing({ config }: { config: Config }) {
           aria-labelledby="controls-title"
         >
           <div>
-            <p className="eyebrow">No detours. No upgrades.</p>
-            <h2 id="controls-title">
-              Just you and
-              <br />
-              the escape route.
-            </h2>
+            <h2 id="controls-title">Move. Fire. Survive.</h2>
             <p>
               Every drone destroyed adds one cargo point. The core burst comes
               to you. Keep moving; there’s nothing to collect.
@@ -262,10 +247,7 @@ export function Landing({ config }: { config: Config }) {
               <Icon name="core" size={32} />
             </span>
             <div>
-              <p className="eyebrow">
-                The getaway is the reward. There’s LOOT, too.
-              </p>
-              <h2 id="rewards-title">Play sharp. Claim your cargo.</h2>
+              <h2 id="rewards-title">Claim your LOOT</h2>
             </div>
           </div>
           <div className="reward-steps">
@@ -303,8 +285,7 @@ export function Landing({ config }: { config: Config }) {
           />
         </section>
         <section className="closing wrap">
-          <p className="eyebrow">The drones aren’t slowing down.</p>
-          <h2>Neither should you.</h2>
+          <h2>Ready for another run?</h2>
           <a className="button primary" href={HOSTED_PLAY}>
             Play on Pepe2Pepe <Icon name="arrow" />
           </a>

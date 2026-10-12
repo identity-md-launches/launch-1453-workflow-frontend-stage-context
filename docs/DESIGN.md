@@ -32,21 +32,23 @@ The browser review measured the rendered solid-surface text/action pairs. Exact 
 
 ## Typography
 
-`web/src/fonts.css` bundles Barlow Condensed at 600/700/800 and DM Sans at 400/500/600/700 as local Latin WOFF2. `font-display: swap` has a system fallback; synthesized faces are disabled. There are no runtime Google Fonts requests.
+`web/src/fonts.css` bundles Barlow Condensed at 600/800 and DM Sans at 400/600 as local Latin WOFF2. The interface uses only weights 400, 600 and 800, including explicit 600-weight bold text. `font-display: swap` has a system fallback; synthesized faces are disabled. There are no runtime Google Fonts requests.
 
 - Barlow Condensed is the display face for the slanted two-line wordmark, large section headings, countdown, cargo, results and numeric statistics. The wordmark is 800 weight with an orange rule and a restrained −5° skew, not an unrelated logo image.
 - DM Sans is the body, controls, captions and error face. Normal copy uses 1.6 line height and a maximum 65-character measure. Titles use 1.03; headings balance their wrapping.
-- `--label-size`, `--small-size`, `--body-size` and `--title-size` define the main role scale. Major controls are approximately 14–16px. Dense decorative captions are smaller; required instructions/errors have separate readable styles.
+- Six size roles cover the interface: `--label-size` (12px), `--small-size` (14px), `--body-size` (16px), `--title-size` (40–56px), `--instrument-size` (56–88px) and `--wordmark-size` (responsive display). All component sizes use these tokens; captions never fall below 12px at the default root size. The public wordmark retains its 80–156.8px desktop range and uses `clamp(2.8rem, 13vw, 5.7rem)` on phones, capped/stacked below 380px. The game scopes titles to 32–56px, instruments to 40–56px (32px in compact landscape play) and its wordmark to 76.8–128px.
 - Changing timer, cargo, reward and score values use tabular numerals. Full addresses stay reachable in selectable code and explorer/copy controls.
 - At phone widths the public wordmark becomes one line where it fits, then returns to a stacked treatment at 380px and below. The last narrow-width rules prevent wordmark/stat overflow under 200% text resizing.
 
 ## Layout and responsive behavior
 
-`Landing.tsx` follows header → illustrated hero → mission statistics → three district stretches → controls → rewards/contracts → final hosted-play link → footer. Its primary action consistently opens the exact hosted game. There is no standalone wallet dashboard.
+`Landing.tsx` follows header → illustrated hero → mission statistics → three district stretches → controls → rewards/contracts → final hosted-play link → footer. The supplied tagline and short instruction carry the hero; sections use direct headings without additional promotional eyebrows. District names, route times and instrument labels remain. Its primary action consistently opens the exact hosted game. There is no standalone wallet dashboard.
 
 The desktop `.wrap` is at most 1,320px, inset 48px. Insets reduce to 28px, then 20px and 16px on the smallest screens. Layout changes at 1,100px, 760px and 380px where the content needs them. Cards use a three-column desktop arrangement and a compact illustration/text row on mobile. The mission and controls switch to a single column. Navigation and stat groups can wrap under text enlargement. Controls stay inside margins and safe areas.
 
-The iframe is an arcade cabinet: a compact toolbar, an instrument row, the Canvas arena, and a separate lower touch-control strip. It uses a square verified world fitted into the available area, preserving the same scale on both axes, with harbor decoration outside the action boundaries. The rig can move through the full engine world without being hidden by thumbs. Portrait and desktop stage sizes differ without changing physics. Screen resizing pauses the run. Result content scrolls within the overlay so claim/expiry/retry actions remain reachable on small or short viewports.
+The iframe is an arcade cabinet: a compact toolbar, an instrument row, the Canvas arena, and a separate lower touch-control strip. During play and pause the cabinet fills `100dvh` (with an `svh` fallback); flex/grid allocate the arena the remaining height, with no arena minimum forcing page scrolling. Landscape viewports at most 600px tall use a 52px toolbar, inline instruments and an 80px movement pad/72px fire button. Pause retains a 44px target. At 844×390 the rendered rows are 52px toolbar, 43px HUD, 207px arena and 88px controls, all visible together.
+
+The square verified world fits the available arena uniformly, with harbor decoration outside the action boundaries; no physics or coordinates change when resizing. Thumbs stay below the rig. Resizing pauses the run. Menu/results and their disclosures retain scrolling, and the pause overlay can scroll on very short screens. Statistic groups use a rem-based flex basis so they wrap when text is enlarged to 200%.
 
 The Canvas renderer preserves aspect ratio for hero art at phone widths. Desktop results use a large extraction image; narrow results include a dedicated image between the result heading and breakdown. Gameplay never cuts the camera away; the cinematic image appears only after the run has ended.
 
@@ -60,9 +62,9 @@ The Canvas renderer preserves aspect ratio for hero art at phone widths. Desktop
 | `GameCanvas` / `web/src/components/GameCanvas.tsx` | Fixed simulation ticks, interpolated drawing, keyboard input, two-pointer touch pad/fire, cancellation handling. Touch gestures suppress scrolling only on the game controls/arena. |
 | HUD / `web/src/components/Game.tsx` | Large countdown, three slanted hull segments, cargo count; damage has visible grace text and an actual countdown arc. Screen-reader status updates on score/hull changes, not every timer tick. |
 | Start/pause/result overlays / `web/src/components/Game.tsx` | Clear primary action by state, local best, expiry, verification, unpaid/paid distinction, cancelled/uncertain transaction recovery. Programmatic heading focus announces screen changes without adding a tab stop. |
-| Settings dialog / `web/src/components/Game.tsx:584` | Native modal dialog, labelled heading, focus trap, Escape support, focus restoration, sound/motion/effects settings. Opening it pauses play. |
+| Settings dialog / `web/src/components/Game.tsx` | Native modal dialog, labelled heading, focus trap, Escape support, focus restoration, sound/motion/effects settings. Opening it pauses play. |
 | `DeploymentPanel` / `web/src/components/DeploymentPanel.tsx` | Native details/summary disclosure. Live balance/policy/close date, loading/retry, full addresses, copy success/failure, explorer links and creator-operation links. |
-| Controller / `web/src/game/useArcade.ts` | One bridge, session state machine, retryable verification, claim locking through confirmation, explicit uncertain-write recovery, safe input checkpoints. |
+| Controller / `web/src/game/useArcade.ts` | One bridge, session state machine, retryable verification, claim locking through confirmation, explicit uncertain-write recovery, safe input checkpoints. An in-flight claim retains its voucher/session through local expiry. Pending/uncertain claims block reset; expiry alone never reports that an outstanding wallet request failed. |
 
 ## Motion, depth and shapes
 

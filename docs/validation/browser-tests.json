@@ -1,127 +1,128 @@
 {
-  "startedAt": "2026-10-12T19:11:09.472Z",
+  "startedAt": "2026-10-12T19:49:56.002Z",
   "browser": "141.0.7390.37",
+  "manifestSha256": "23fb7d89052666ae2deef8505753824c71948b6e033209738b65be0d5db71036",
   "kind": "Production static export; sandboxed opaque iframe; mocked wallet/host/RPC. No transactions broadcast.",
   "tests": [
     {
       "name": "standalone: exact hosted link, relative assets, no wallet or query bypass",
       "passed": true,
-      "durationMs": 376
-    },
-    {
-      "name": "desktop/mobile/320px reflow, 200% text, keyboard focus, contrast and accessibility",
-      "passed": true,
-      "durationMs": 1093
+      "durationMs": 3293
     },
     {
       "name": "real parent handshake required; child/window spoof and query parameters ignored",
       "passed": true,
-      "durationMs": 245
-    },
-    {
-      "name": "one-shot parent init survives asynchronous deployment loading",
-      "passed": true,
-      "durationMs": 229
+      "durationMs": 5119
     },
     {
       "name": "wrong-channel responses cannot resolve pending wallet authorization",
       "passed": true,
-      "durationMs": 521
-    },
-    {
-      "name": "review demo runs with zero public RPC or reward-service requests",
-      "passed": true,
-      "durationMs": 775
+      "durationMs": 8676
     },
     {
       "name": "keyboard movement + shots, Escape pause freezes physics, resume, resize and host pause",
       "passed": true,
-      "durationMs": 2913
-    },
-    {
-      "name": "demo full extraction, loss, retained points and restart use frozen physics",
-      "passed": true,
-      "durationMs": 29263
+      "durationMs": 15508
     },
     {
       "name": "touch: two pointers steer and fire together; cancellation pauses; thumbs below rig",
       "passed": true,
-      "durationMs": 732
-    },
-    {
-      "name": "settings: focus trap, sound toggle, reduced motion/effects, close returns focus",
-      "passed": true,
-      "durationMs": 542
+      "durationMs": 3911
     },
     {
       "name": "wallet/session rejection returns cleanly to start; no play before authorization",
       "passed": true,
-      "durationMs": 594
-    },
-    {
-      "name": "funded hosted gameplay uploads one replay; queued result polls, then claim confirms",
-      "passed": true,
-      "durationMs": 19890
+      "durationMs": 7788
     },
     {
       "name": "claim cancellation is recoverable and duplicate clicks stay locked until receipt",
       "passed": true,
-      "durationMs": 947
-    },
-    {
-      "name": "claims disabled for expired",
-      "passed": true,
-      "durationMs": 500
+      "durationMs": 14602
     },
     {
       "name": "claims disabled for wrong wallet",
       "passed": true,
-      "durationMs": 503
-    },
-    {
-      "name": "claims disabled for tampered rules",
-      "passed": true,
-      "durationMs": 423
+      "durationMs": 6807
     },
     {
       "name": "claims disabled for wrong chain",
       "passed": true,
-      "durationMs": 433
-    },
-    {
-      "name": "empty pool blocks new runs but keeps saved-reward recovery available",
-      "passed": true,
-      "durationMs": 453
+      "durationMs": 8900
     },
     {
       "name": "RPC failures fail closed with retry and never request a hosted session",
       "passed": true,
-      "durationMs": 264
-    },
-    {
-      "name": "signed zero reward resolves without a fake claim or calculated token amount",
-      "passed": true,
-      "durationMs": 505
+      "durationMs": 3410
     },
     {
       "name": "pending transaction uncertainty requires an explicit status check",
       "passed": true,
-      "durationMs": 847
-    },
-    {
-      "name": "queued verification stops automatically after 60 seconds and offers retry",
-      "passed": true,
-      "durationMs": 24138
+      "durationMs": 6173
     },
     {
       "name": "five-minute session deadline survives pause and expires plainly",
       "passed": true,
-      "durationMs": 866
+      "durationMs": 3205
+    },
+    {
+      "name": "desktop/mobile/320px reflow, 200% text, keyboard focus, contrast and accessibility",
+      "passed": true,
+      "durationMs": 4626
+    },
+    {
+      "name": "one-shot parent init survives asynchronous deployment loading",
+      "passed": true,
+      "durationMs": 961
+    },
+    {
+      "name": "review demo runs with zero public RPC or reward-service requests",
+      "passed": true,
+      "durationMs": 1487
+    },
+    {
+      "name": "demo full extraction, loss, retained points and restart use frozen physics",
+      "passed": true,
+      "durationMs": 68530
+    },
+    {
+      "name": "settings: focus trap, sound toggle, reduced motion/effects, close returns focus",
+      "passed": true,
+      "durationMs": 4384
+    },
+    {
+      "name": "funded hosted gameplay uploads one replay; queued result polls, then claim confirms",
+      "passed": true,
+      "durationMs": 32438
+    },
+    {
+      "name": "claims disabled for expired",
+      "passed": true,
+      "durationMs": 2108
+    },
+    {
+      "name": "claims disabled for tampered rules",
+      "passed": true,
+      "durationMs": 2162
+    },
+    {
+      "name": "empty pool blocks new runs but keeps saved-reward recovery available",
+      "passed": true,
+      "durationMs": 1992
+    },
+    {
+      "name": "signed zero reward resolves without a fake claim or calculated token amount",
+      "passed": true,
+      "durationMs": 2640
+    },
+    {
+      "name": "queued verification stops automatically after 60 seconds and offers retry",
+      "passed": true,
+      "durationMs": 39464
     },
     {
       "name": "iframe menu, pause and settings accessibility; prefers-reduced-motion default",
       "passed": true,
-      "durationMs": 1121
+      "durationMs": 3587
     }
   ],
   "measurements": {
@@ -177,7 +178,7 @@
     "iframeAxe": []
   },
   "consoleErrors": [],
-  "finishedAt": "2026-10-12T19:12:37.648Z",
+  "finishedAt": "2026-10-12T19:54:31.300Z",
   "passed": 24,
   "failed": 0
 }

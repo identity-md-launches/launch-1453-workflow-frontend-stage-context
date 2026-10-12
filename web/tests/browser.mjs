@@ -6,12 +6,17 @@ import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { startServer, testHashes } from "./server.mjs";
 import { mockRPC } from "./rpc-fixture.mjs";
-import { root } from "../scripts/common.mjs";
+import { root, sha256 } from "../scripts/common.mjs";
+// Optional shards keep the same checks within a worker's command time limit.
+const shard = process.env.SKYLINE_BROWSER_SHARD;
+if (shard && !/^[12]\/2$/.test(shard)) throw Error("Use shard 1/2 or 2/2");
+let testIndex = 0;
 const server = await startServer(),
   browser = await chromium.launch({ headless: true });
 const evidence = {
   startedAt: new Date().toISOString(),
   browser: browser.version(),
+  manifestSha256: sha256(await readFile(resolve(root, "dist/imd-deployment.json"))),
   kind: "Production static export; sandboxed opaque iframe; mocked wallet/host/RPC. No transactions broadcast.",
   tests: [],
   measurements: {},
@@ -23,6 +28,7 @@ async function newPage(options = {}) {
   return context.newPage();
 }
 async function run(name, fn) {
+  if (shard && testIndex++ % 2 !== Number(shard[0]) - 1) return;
   const start = Date.now();
   try {
     await fn();
@@ -759,7 +765,7 @@ try {
   evidence.passed = evidence.tests.filter((x) => x.passed).length;
   evidence.failed = failures.length;
   await writeFile(
-    resolve(root, "docs/validation/browser-tests.json"),
+    resolve(root, `docs/validation/browser-tests${shard ? `-${shard[0]}` : ""}.json`),
     JSON.stringify(evidence, null, 2) + "\n",
   );
   await browser.close();

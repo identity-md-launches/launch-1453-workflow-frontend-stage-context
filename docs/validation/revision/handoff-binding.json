@@ -1,0 +1,17 @@
+{
+  "sourceCommit": "03131de3c1cbc06b61e1b1361e87aa8a2b5432ac",
+  "attestationHash": "6c973867432617f65c3c6ba0c1b3267fbd164fa8777ad81be6938ffd385c1a47",
+  "pinnedInputsByteIdentical": true,
+  "networkAndPoolKeyUnchanged": true,
+  "abis": [
+    {
+      "name": "LaunchToken",
+      "canonicalKeccak": "f36d2fe28b62f817a4fba0b78bb501b41895eada3982280273c063ad8183f577"
+    },
+    {
+      "name": "Game",
+      "canonicalKeccak": "3476aa3d42e0f3e0a44c2399a0e1940fb75f2380b169bc0412749e6153d330a2"
+    }
+  ],
+  "manifestSha256": "23fb7d89052666ae2deef8505753824c71948b6e033209738b65be0d5db71036"
+}

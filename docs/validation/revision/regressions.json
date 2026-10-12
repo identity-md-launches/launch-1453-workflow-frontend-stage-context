@@ -1,0 +1,575 @@
+{
+  "browser": "141.0.7390.37",
+  "manifestSha256": "23fb7d89052666ae2deef8505753824c71948b6e033209738b65be0d5db71036",
+  "checkedAt": "2026-10-12T19:54:41.134Z",
+  "tests": [
+    {
+      "name": "landscape 844×390: HUD, arena, pause, dual touch and no scroll",
+      "passed": true
+    },
+    {
+      "name": "landscape 667×375: HUD, arena, pause, dual touch and no scroll",
+      "passed": true
+    },
+    {
+      "name": "landscape 740×360: HUD, arena, pause, dual touch and no scroll",
+      "passed": true
+    },
+    {
+      "name": "landscape 568×320: HUD, arena, pause, dual touch and no scroll",
+      "passed": true
+    },
+    {
+      "name": "landscape 932×430: HUD, arena, pause, dual touch and no scroll",
+      "passed": true
+    },
+    {
+      "name": "portrait to landscape rotation pauses safely and resumes without losing instruments",
+      "passed": true
+    },
+    {
+      "name": "voucher expiry during pending claim: confirmed outcome",
+      "passed": true
+    },
+    {
+      "name": "voucher expiry during pending claim: cancelled outcome",
+      "passed": true
+    },
+    {
+      "name": "voucher expiry during pending claim: uncertain outcome",
+      "passed": true
+    },
+    {
+      "name": "public typography uses six sizes, three weights and concise headings at phone and desktop widths",
+      "passed": true
+    }
+  ],
+  "measurements": {
+    "landscape": [
+      {
+        "width": 844,
+        "height": 390,
+        "scrollHeight": 390,
+        "scrollWidth": 844,
+        "scrollY": 0,
+        "boxes": {
+          ".game-header": {
+            "x": 0,
+            "y": 0,
+            "width": 844,
+            "height": 52,
+            "bottom": 52,
+            "right": 844
+          },
+          ".game-hud": {
+            "x": 0,
+            "y": 52,
+            "width": 844,
+            "height": 43,
+            "bottom": 95,
+            "right": 844
+          },
+          ".canvas-stage": {
+            "x": 0,
+            "y": 95,
+            "width": 844,
+            "height": 207,
+            "bottom": 302,
+            "right": 844
+          },
+          ".touch-controls": {
+            "x": 0,
+            "y": 302,
+            "width": 844,
+            "height": 88,
+            "bottom": 390,
+            "right": 844
+          },
+          ".movement-pad": {
+            "x": 32,
+            "y": 306,
+            "width": 80,
+            "height": 80,
+            "bottom": 386,
+            "right": 112
+          },
+          ".fire-button": {
+            "x": 740,
+            "y": 310,
+            "width": 72,
+            "height": 72,
+            "bottom": 382,
+            "right": 812
+          },
+          ".pause-button": {
+            "x": 730.984375,
+            "y": 4,
+            "width": 97,
+            "height": 44,
+            "bottom": 48,
+            "right": 827.984375
+          }
+        }
+      },
+      {
+        "width": 667,
+        "height": 375,
+        "scrollHeight": 375,
+        "scrollWidth": 667,
+        "scrollY": 0,
+        "boxes": {
+          ".game-header": {
+            "x": 0,
+            "y": 0,
+            "width": 667,
+            "height": 52,
+            "bottom": 52,
+            "right": 667
+          },
+          ".game-hud": {
+            "x": 0,
+            "y": 52,
+            "width": 667,
+            "height": 43,
+            "bottom": 95,
+            "right": 667
+          },
+          ".canvas-stage": {
+            "x": 0,
+            "y": 95,
+            "width": 667,
+            "height": 191,
+            "bottom": 286,
+            "right": 667
+          },
+          ".touch-controls": {
+            "x": 0,
+            "y": 286,
+            "width": 667,
+            "height": 89,
+            "bottom": 375,
+            "right": 667
+          },
+          ".movement-pad": {
+            "x": 32,
+            "y": 291,
+            "width": 80,
+            "height": 80,
+            "bottom": 371,
+            "right": 112
+          },
+          ".fire-button": {
+            "x": 562.984375,
+            "y": 295,
+            "width": 72,
+            "height": 72,
+            "bottom": 367,
+            "right": 634.984375
+          },
+          ".pause-button": {
+            "x": 573,
+            "y": 4,
+            "width": 78,
+            "height": 44,
+            "bottom": 48,
+            "right": 651
+          }
+        }
+      },
+      {
+        "width": 740,
+        "height": 360,
+        "scrollHeight": 360,
+        "scrollWidth": 740,
+        "scrollY": 0,
+        "boxes": {
+          ".game-header": {
+            "x": 0,
+            "y": 0,
+            "width": 740,
+            "height": 52,
+            "bottom": 52,
+            "right": 740
+          },
+          ".game-hud": {
+            "x": 0,
+            "y": 52,
+            "width": 740,
+            "height": 43,
+            "bottom": 95,
+            "right": 740
+          },
+          ".canvas-stage": {
+            "x": 0,
+            "y": 95,
+            "width": 740,
+            "height": 176,
+            "bottom": 271,
+            "right": 740
+          },
+          ".touch-controls": {
+            "x": 0,
+            "y": 271,
+            "width": 740,
+            "height": 89,
+            "bottom": 360,
+            "right": 740
+          },
+          ".movement-pad": {
+            "x": 32,
+            "y": 276,
+            "width": 80,
+            "height": 80,
+            "bottom": 356,
+            "right": 112
+          },
+          ".fire-button": {
+            "x": 635.984375,
+            "y": 280,
+            "width": 72,
+            "height": 72,
+            "bottom": 352,
+            "right": 707.984375
+          },
+          ".pause-button": {
+            "x": 646,
+            "y": 4,
+            "width": 78,
+            "height": 44,
+            "bottom": 48,
+            "right": 724
+          }
+        }
+      },
+      {
+        "width": 568,
+        "height": 320,
+        "scrollHeight": 320,
+        "scrollWidth": 568,
+        "scrollY": 0,
+        "boxes": {
+          ".game-header": {
+            "x": 0,
+            "y": 0,
+            "width": 568,
+            "height": 52,
+            "bottom": 52,
+            "right": 568
+          },
+          ".game-hud": {
+            "x": 0,
+            "y": 52,
+            "width": 568,
+            "height": 43,
+            "bottom": 95,
+            "right": 568
+          },
+          ".canvas-stage": {
+            "x": 0,
+            "y": 95,
+            "width": 568,
+            "height": 136,
+            "bottom": 231,
+            "right": 568
+          },
+          ".touch-controls": {
+            "x": 0,
+            "y": 231,
+            "width": 568,
+            "height": 89,
+            "bottom": 320,
+            "right": 568
+          },
+          ".movement-pad": {
+            "x": 32,
+            "y": 236,
+            "width": 80,
+            "height": 80,
+            "bottom": 316,
+            "right": 112
+          },
+          ".fire-button": {
+            "x": 463.984375,
+            "y": 240,
+            "width": 72,
+            "height": 72,
+            "bottom": 312,
+            "right": 535.984375
+          },
+          ".pause-button": {
+            "x": 474,
+            "y": 4,
+            "width": 78,
+            "height": 44,
+            "bottom": 48,
+            "right": 552
+          }
+        }
+      },
+      {
+        "width": 932,
+        "height": 430,
+        "scrollHeight": 430,
+        "scrollWidth": 932,
+        "scrollY": 0,
+        "boxes": {
+          ".game-header": {
+            "x": 0,
+            "y": 0,
+            "width": 932,
+            "height": 52,
+            "bottom": 52,
+            "right": 932
+          },
+          ".game-hud": {
+            "x": 0,
+            "y": 52,
+            "width": 932,
+            "height": 43,
+            "bottom": 95,
+            "right": 932
+          },
+          ".canvas-stage": {
+            "x": 0,
+            "y": 95,
+            "width": 932,
+            "height": 247,
+            "bottom": 342,
+            "right": 932
+          },
+          ".touch-controls": {
+            "x": 0,
+            "y": 342,
+            "width": 932,
+            "height": 88,
+            "bottom": 430,
+            "right": 932
+          },
+          ".movement-pad": {
+            "x": 32,
+            "y": 346,
+            "width": 80,
+            "height": 80,
+            "bottom": 426,
+            "right": 112
+          },
+          ".fire-button": {
+            "x": 828,
+            "y": 350,
+            "width": 72,
+            "height": 72,
+            "bottom": 422,
+            "right": 900
+          },
+          ".pause-button": {
+            "x": 818.984375,
+            "y": 4,
+            "width": 97,
+            "height": 44,
+            "bottom": 48,
+            "right": 915.984375
+          }
+        }
+      }
+    ],
+    "typography": [
+      {
+        "width": 390,
+        "sizes": {
+          "16px": [
+            "Skip to content",
+            "SkylineHeist",
+            "Heist",
+            "Waterfront lanes",
+            "NH",
+            "Billboard canyon",
+            "The last approach"
+          ],
+          "12px": [
+            "How to play",
+            "LOOT rewards",
+            "Neon Harbor · After dark",
+            "Free entry. Connect your wallet on Pepe2Pepe.",
+            "Resume scenery",
+            "01 / NEON HARBOR",
+            "EXTRACTION IN 00:60",
+            "SEC",
+            "Hold out for extraction.",
+            "HULL",
+            "Make every near miss count.",
+            "WAY OUT",
+            "Keep the points. Even if you go down.",
+            "Your route to extraction",
+            "00—20 SEC",
+            "20—40 SEC",
+            "40—60 SEC",
+            "W",
+            "A",
+            "S",
+            "D",
+            "Space",
+            "Esc",
+            "01",
+            "02",
+            "03",
+            "Live reward pool & contract details ＋",
+            "＋",
+            "An original arcade escape.Built for a clean shot and one mor",
+            "Release manifest"
+          ],
+          "50.7px": [
+            "SkylineHeist",
+            "Heist"
+          ],
+          "14px": [
+            "Sixty seconds. Three hull bars.One way out.",
+            "Move. Shoot drones. Survive 60 seconds.",
+            "Play on Pepe2Pepe",
+            "You have the city’s master data-core. The security drones wa",
+            "Amber lamps. Ink-blue canals.Find your opening.",
+            "Cold light. Close calls.Stay on target.",
+            "The harbor falls away.Bring the core home.",
+            "Every drone destroyed adds one cargo point. The core burst c",
+            "Keyboard",
+            "or arrow keys to move",
+            "Space fire Esc pause",
+            "Touch",
+            "Left thumb steers.Right thumb fires.",
+            "Both controls work together. Keep firing as you move.",
+            "Play a free run",
+            "Pepe2Pepe connects your wallet and checks reward availabilit",
+            "Get your run verified",
+            "One LOOT per verified point, up to 100 per run. Both endings",
+            "Claim after the action",
+            "Confirm the amount, expiry and wallet gas fee. Claiming is a",
+            "Play on Pepe2Pepe"
+          ],
+          "40px": [
+            "Make yourexit count.",
+            "exit count.",
+            "One district. Three stretches.",
+            "Move. Fire. Survive.",
+            "⊕",
+            "Claim your LOOT",
+            "Ready for another run?"
+          ],
+          "56px": [
+            "60SEC",
+            "03HULL",
+            "01WAY OUT"
+          ]
+        },
+        "weights": [
+          "400",
+          "600",
+          "800"
+        ],
+        "scrollWidth": 390
+      },
+      {
+        "width": 1440,
+        "sizes": {
+          "16px": [
+            "Skip to content",
+            "SkylineHeist",
+            "Heist",
+            "Sixty seconds. Three hull bars.One way out.",
+            "Waterfront lanes",
+            "NH",
+            "Billboard canyon",
+            "The last approach",
+            "SkylineHeist",
+            "Heist"
+          ],
+          "14px": [
+            "The mission",
+            "How to play",
+            "LOOT rewards",
+            "Move. Shoot drones. Survive 60 seconds.",
+            "Play on Pepe2Pepe",
+            "You have the city’s master data-core. The security drones wa",
+            "Hold out for extraction.",
+            "Make every near miss count.",
+            "Keep the points. Even if you go down.",
+            "Amber lamps. Ink-blue canals.Find your opening.",
+            "Cold light. Close calls.Stay on target.",
+            "The harbor falls away.Bring the core home.",
+            "Every drone destroyed adds one cargo point. The core burst c",
+            "Keyboard",
+            "or arrow keys to move",
+            "Space fire Esc pause",
+            "Touch",
+            "Left thumb steers.Right thumb fires.",
+            "Both controls work together. Keep firing as you move.",
+            "Play a free run",
+            "Pepe2Pepe connects your wallet and checks reward availabilit",
+            "Get your run verified",
+            "One LOOT per verified point, up to 100 per run. Both endings",
+            "Claim after the action",
+            "Confirm the amount, expiry and wallet gas fee. Claiming is a",
+            "Live reward pool & contract details ＋",
+            "＋",
+            "Play on Pepe2Pepe"
+          ],
+          "12px": [
+            "A NEON GETAWAY ARCADE",
+            "Neon Harbor · After dark",
+            "Free entry. Connect your wallet on Pepe2Pepe.",
+            "Resume scenery",
+            "01 / NEON HARBOR",
+            "EXTRACTION IN 00:60",
+            "SEC",
+            "HULL",
+            "WAY OUT",
+            "Your route to extraction",
+            "00—20 SEC",
+            "20—40 SEC",
+            "40—60 SEC",
+            "W",
+            "A",
+            "S",
+            "D",
+            "Space",
+            "Esc",
+            "01",
+            "02",
+            "03",
+            "An original arcade escape.Built for a clean shot and one mor",
+            "Release manifest",
+            "NEON HARBOR / RELEASE 01"
+          ],
+          "149.76px": [
+            "SkylineHeist",
+            "Heist"
+          ],
+          "50.4px": [
+            "Make yourexit count.",
+            "exit count.",
+            "One district. Three stretches.",
+            "01",
+            "02",
+            "03",
+            "Move. Fire. Survive.",
+            "⊕",
+            "Claim your LOOT",
+            "Ready for another run?"
+          ],
+          "87.84px": [
+            "60SEC",
+            "03HULL",
+            "01WAY OUT"
+          ]
+        },
+        "weights": [
+          "400",
+          "600",
+          "800"
+        ],
+        "scrollWidth": 1440
+      }
+    ]
+  },
+  "errors": [],
+  "passed": 10,
+  "failed": 0
+}

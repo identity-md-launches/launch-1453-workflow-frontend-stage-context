@@ -28,7 +28,9 @@
   --label-size: 0.75rem;
   --small-size: 0.875rem;
   --body-size: 1rem;
-  --title-size: clamp(2.5rem, 4.6vw, 4.5rem);
+  --title-size: clamp(2.5rem, 3.5vw, 3.5rem);
+  --instrument-size: clamp(3.5rem, 6.1vw, 5.5rem);
+  --wordmark-size: clamp(5rem, 10.4vw, 9.8rem);
   font-family: var(--body);
   color: var(--text);
   background: var(--bg);
@@ -103,8 +105,12 @@ h2 {
   font-size: var(--title-size);
 }
 h3 {
-  font-size: 1.05rem;
+  font-size: var(--body-size);
   line-height: 1.3;
+  font-weight: 600;
+}
+b,
+strong {
   font-weight: 600;
 }
 p {
@@ -164,8 +170,8 @@ svg {
   border: 1px solid transparent;
   border-radius: 3px;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: var(--small-size);
+  font-weight: 600;
   line-height: 1.5;
   text-align: center;
 }
@@ -181,7 +187,7 @@ svg {
 .button.compact {
   min-height: 44px;
   padding: 9px 16px;
-  font-size: 0.8rem;
+  font-size: var(--small-size);
   gap: 8px;
 }
 .icon-button {
@@ -200,17 +206,17 @@ svg {
   background: none;
   padding: 10px 0;
   min-height: 44px;
-  font-size: 0.875rem;
+  font-size: var(--small-size);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 .fine-print {
-  font-size: 0.8rem;
+  font-size: var(--small-size);
   color: var(--text-secondary);
   line-height: 1.6;
 }
 .notice {
-  font-size: 0.875rem;
+  font-size: var(--small-size);
   color: var(--error);
   line-height: 1.6;
 }
@@ -228,18 +234,18 @@ svg {
 }
 .brand > span {
   font-family: var(--display);
-  font-size: 1.12rem;
+  font-size: var(--body-size);
   line-height: 0.92;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
 }
 .brand > span > span {
   display: block;
   letter-spacing: 0.2em;
 }
 .brand-small > span {
-  font-size: 1rem;
+  font-size: var(--body-size);
 }
 .brand-small > svg {
   width: 27px;
@@ -265,16 +271,16 @@ svg {
   align-items: center;
   text-decoration: none;
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: var(--small-size);
 }
 .release-label {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 0.625rem;
+  font-size: var(--label-size);
   letter-spacing: 0.1em;
   color: var(--text-muted);
-  font-weight: 500;
+  font-weight: 400;
 }
 .release-label > span {
   display: block;
@@ -328,7 +334,7 @@ svg {
 .wordmark {
   text-transform: uppercase;
   font-weight: 800;
-  font-size: clamp(5rem, 10.4vw, 9.8rem);
+  font-size: var(--wordmark-size);
   line-height: 0.8;
   letter-spacing: -0.022em;
   transform: skew(-5deg);
@@ -348,15 +354,15 @@ svg {
   margin-block-start: 18px;
 }
 .tagline {
-  font-size: 1rem;
+  font-size: var(--body-size);
   line-height: 1.55;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 .hero-instruction {
   color: var(--text-secondary);
-  font-size: 0.84rem;
+  font-size: var(--small-size);
   margin-block: 18px 23px;
 }
 .play-link {
@@ -365,28 +371,8 @@ svg {
 }
 .play-note {
   margin-block-start: 11px;
-  font-size: 0.71rem;
+  font-size: var(--label-size);
   color: var(--text-muted);
-}
-.hero-caption {
-  position: absolute;
-  inset-block-end: 142px;
-  inset-inline-end: 40px;
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-.hero-caption .eyebrow {
-  font-size: 0.67rem;
-}
-.hero-caption div > span:last-child {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-}
-.crosshair {
-  font-size: 34px;
-  font-weight: 400;
-  color: var(--accent);
 }
 .motion-button {
   position: absolute;
@@ -399,7 +385,7 @@ svg {
   min-height: 44px;
   border: 1px solid #61727a77;
   background: #0b141bc9;
-  font-size: 0.71rem;
+  font-size: var(--label-size);
   border-radius: 3px;
 }
 .hero-bottom {
@@ -409,8 +395,8 @@ svg {
   display: flex;
   justify-content: space-between;
   color: var(--text-muted);
-  font-size: 0.625rem;
-  font-weight: 500;
+  font-size: var(--label-size);
+  font-weight: 400;
   letter-spacing: 0.1em;
 }
 .mission {
@@ -420,7 +406,7 @@ svg {
   padding-block: 85px 95px;
 }
 .section-intro h2 {
-  margin-block: 16px 24px;
+  margin-block: 0 24px;
 }
 .section-intro h2 em {
   font-style: normal;
@@ -428,7 +414,7 @@ svg {
 }
 .section-intro > p:last-child {
   max-width: 400px;
-  font-size: 0.9rem;
+  font-size: var(--small-size);
   color: var(--text-secondary);
 }
 .mission-stats {
@@ -444,21 +430,21 @@ svg {
 }
 .mission-stats strong {
   font-family: var(--display);
-  font-size: 5.5rem;
+  font-size: var(--instrument-size);
   font-weight: 600;
   line-height: 1;
   font-variant-numeric: tabular-nums;
 }
 .mission-stats strong span {
   display: block;
-  font: 600 0.64rem/1.5 var(--body);
+  font: 600 var(--label-size) / 1.5 var(--body);
   letter-spacing: 0.1em;
   margin-block: 10px 20px;
   color: var(--accent);
 }
 .mission-stats p {
   color: var(--text-muted);
-  font-size: 0.8rem;
+  font-size: var(--small-size);
   max-width: 140px;
 }
 .district-section {
@@ -472,11 +458,11 @@ svg {
   margin-block-end: 26px;
 }
 .section-heading h2 {
-  font-size: 2rem;
+  font-size: var(--title-size);
   letter-spacing: -0.015em;
 }
 .section-heading .eyebrow {
-  font-size: 0.625rem;
+  font-size: var(--label-size);
 }
 .district-cards {
   display: grid;
@@ -597,8 +583,8 @@ svg {
   position: absolute;
   left: 9%;
   top: 28px;
-  font: 700 24px var(--display);
-  background: #a4588e;
+  font: 600 var(--body-size) var(--display);
+  background: #774267;
   color: #f3cbea;
   padding: 8px 6px;
   transform: rotate(-22deg);
@@ -628,7 +614,7 @@ svg {
   position: relative;
 }
 .district-copy .eyebrow {
-  font-size: 0.625rem;
+  font-size: var(--label-size);
   letter-spacing: 0.11em;
   color: var(--text-muted);
 }
@@ -637,13 +623,13 @@ svg {
 }
 .district-copy p {
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: var(--small-size);
 }
 .chapter {
   position: absolute;
   bottom: 27px;
   right: 22px;
-  font: 600 3.2rem/0.9 var(--display);
+  font: 600 var(--title-size) / 0.9 var(--display);
   color: #3b505c;
 }
 .controls-section {
@@ -654,11 +640,11 @@ svg {
   padding-block: 66px 75px;
 }
 .controls-section h2 {
-  margin-block: 15px 22px;
-  font-size: 3.1rem;
+  margin-block: 0 22px;
+  font-size: var(--title-size);
 }
 .controls-section > div > p:last-child {
-  font-size: 0.85rem;
+  font-size: var(--small-size);
   color: var(--text-secondary);
   max-width: 350px;
 }
@@ -676,15 +662,15 @@ svg {
   height: 26px;
 }
 .touch-symbol {
-  font-size: 34px;
+  font-size: var(--title-size);
   line-height: 26px;
 }
 .control-guide h3 {
   margin-block-end: 16px;
-  font-size: 0.9rem;
+  font-size: var(--small-size);
 }
 .control-guide p {
-  font-size: 0.8rem;
+  font-size: var(--small-size);
   color: var(--text-secondary);
   margin-block-start: 12px;
 }
@@ -702,7 +688,7 @@ kbd {
   border-bottom-width: 3px;
   border-radius: 3px;
   background: var(--surface);
-  font: 500 0.75rem/1.6 var(--body);
+  font: 400 var(--label-size) / 1.6 var(--body);
   min-width: 26px;
 }
 .wide-key {
@@ -731,11 +717,11 @@ kbd {
   border-radius: 3px;
 }
 .reward-heading .eyebrow {
-  font-size: 0.625rem;
+  font-size: var(--label-size);
 }
 .reward-heading h2 {
-  font-size: 2.6rem;
-  margin-block-start: 6px;
+  font-size: var(--title-size);
+  margin-block-start: 0;
 }
 .reward-steps {
   display: grid;
@@ -744,20 +730,20 @@ kbd {
   margin-block: 38px;
 }
 .reward-steps > div > span {
-  font: 500 0.65rem/1 var(--body);
+  font: 400 var(--label-size) / 1 var(--body);
   color: var(--accent);
 }
 .reward-steps h3 {
   margin-block: 12px 9px;
-  font-size: 0.87rem;
+  font-size: var(--small-size);
 }
 .reward-steps p {
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: var(--small-size);
 }
 .deployment-panel {
   border-top: 1px solid var(--border);
-  font-size: 0.875rem;
+  font-size: var(--small-size);
 }
 .deployment-panel summary {
   cursor: pointer;
@@ -766,7 +752,7 @@ kbd {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  font-size: 0.8rem;
+  font-size: var(--small-size);
   list-style: none;
 }
 .deployment-panel summary::-webkit-details-marker {
@@ -786,11 +772,11 @@ kbd {
 }
 .contract-readout strong {
   display: block;
-  font: 600 2rem/1.3 var(--display);
+  font: 600 var(--title-size) / 1.3 var(--display);
   margin-block: 10px;
 }
 .contract-readout p {
-  font-size: 0.8rem;
+  font-size: var(--small-size);
   color: var(--text-secondary);
 }
 .contract-readout .button {
@@ -806,7 +792,7 @@ kbd {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  font-size: 0.8rem;
+  font-size: var(--small-size);
 }
 .facts dt {
   color: var(--text-muted);
@@ -834,7 +820,7 @@ kbd {
 }
 .address-row code {
   overflow-wrap: anywhere;
-  font-size: 0.72rem;
+  font-size: var(--label-size);
   color: var(--text-secondary);
 }
 .creator-row {
@@ -843,7 +829,7 @@ kbd {
   align-items: center;
   gap: 16px 24px;
   margin-block: 22px 8px;
-  font-size: 0.8rem;
+  font-size: var(--small-size);
 }
 .creator-row > a {
   min-height: 44px;
@@ -859,8 +845,8 @@ kbd {
   margin-inline: auto;
 }
 .closing h2 {
-  font-size: 4rem;
-  margin-block: 15px 28px;
+  font-size: var(--title-size);
+  margin-block: 0 28px;
 }
 .site-footer {
   border-top: 1px solid var(--border);
@@ -872,17 +858,17 @@ kbd {
 }
 .site-footer p {
   color: var(--text-muted);
-  font-size: 0.7rem;
+  font-size: var(--label-size);
 }
 .site-footer > a {
   display: flex;
   align-items: center;
   gap: 8px;
   min-height: 44px;
-  font-size: 0.75rem;
+  font-size: var(--label-size);
 }
 .site-footer > span {
-  font-size: 0.55rem;
+  font-size: var(--label-size);
   letter-spacing: 0.1em;
   color: var(--text-muted);
 }
@@ -898,13 +884,16 @@ kbd {
   padding: 32px;
 }
 .load-screen h1 {
-  font-size: 3rem;
+  font-size: var(--title-size);
 }
 .load-screen p {
   color: var(--text-secondary);
 }
 /* The host iframe is a self-contained arcade cabinet. */
 .game-shell {
+  --title-size: clamp(2rem, 4.6vw, 3.5rem);
+  --instrument-size: clamp(2.5rem, 4.6vw, 3.5rem);
+  --wordmark-size: clamp(4.8rem, 10vw, 8rem);
   min-height: 100svh;
   background: var(--bg);
   padding: 0 max(0px, env(safe-area-inset-right)) env(safe-area-inset-bottom)
@@ -922,7 +911,7 @@ kbd {
 }
 .game-mode {
   color: var(--text-secondary);
-  font-size: 0.72rem;
+  font-size: var(--label-size);
 }
 .game-toolbar {
   display: flex;
@@ -947,18 +936,18 @@ kbd {
   border-block: 1px solid var(--border);
 }
 .game-hud .eyebrow {
-  font-size: 0.625rem;
+  font-size: var(--label-size);
   letter-spacing: 0.12em;
 }
 .game-hud strong {
   font-family: var(--display);
-  font-size: 3.5rem;
+  font-size: var(--instrument-size);
   line-height: 1;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
 .hud-timer small {
-  font: 500 0.65rem var(--body);
+  font: 400 var(--label-size) var(--body);
   margin-inline-start: 8px;
   color: var(--text-muted);
 }
@@ -983,7 +972,7 @@ kbd {
   border-color: var(--text);
 }
 .hud-hull small {
-  font-size: 0.6rem;
+  font-size: var(--label-size);
   color: var(--text-secondary);
 }
 .hud-cargo {
@@ -1002,6 +991,37 @@ kbd {
   position: relative;
   isolation: isolate;
 }
+/* During play, instruments and both touch targets share the viewport.
+   Menu/results retain their scrollable content and contract disclosures. */
+.game-shell:is(.phase-playing, .phase-paused) {
+  height: 100svh;
+  height: 100dvh;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.game-shell:is(.phase-playing, .phase-paused) .game-header {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.game-shell:is(.phase-playing, .phase-paused) .game-main {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+.game-shell:is(.phase-playing, .phase-paused) .game-arena {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.game-shell:is(.phase-playing, .phase-paused) .canvas-stage {
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+}
 .canvas-stage {
   height: calc(100svh - 166px);
   min-height: 380px;
@@ -1019,7 +1039,7 @@ kbd {
   position: absolute;
   inset-block-start: 18px;
   inset-inline-start: 22px;
-  font: 500 0.55rem var(--body);
+  font: 400 var(--label-size) var(--body);
   letter-spacing: 0.18em;
   color: #c9e3e460;
   pointer-events: none;
@@ -1051,14 +1071,14 @@ kbd {
   position: relative;
 }
 .start-panel .wordmark {
-  font-size: clamp(5rem, 10vw, 8rem);
+  font-size: var(--wordmark-size);
   margin-block: 22px;
 }
 .start-panel .wordmark i {
   height: 5px;
 }
 .start-instruction {
-  font-size: 1.15rem;
+  font-size: var(--body-size);
   line-height: 1.5;
   margin-block: 20px;
   color: var(--text);
@@ -1078,19 +1098,19 @@ kbd {
   flex-wrap: wrap;
   gap: 12px;
   margin-block: 22px 0;
-  font-size: 0.7rem;
+  font-size: var(--label-size);
   color: var(--text-secondary);
 }
 .start-controls kbd {
-  font-size: 0.65rem;
+  font-size: var(--label-size);
 }
 .best {
   margin-block-start: 18px;
-  font-size: 0.73rem;
+  font-size: var(--label-size);
   color: var(--text-muted);
 }
 .best strong {
-  font-size: 1rem;
+  font-size: var(--body-size);
   color: var(--text);
   font-variant-numeric: tabular-nums;
   margin-inline: 6px;
@@ -1108,7 +1128,7 @@ kbd {
   margin-block: 15px 22px;
 }
 .overlay-card h1 {
-  font-size: 4.5rem;
+  font-size: var(--title-size);
 }
 .overlay-card .fine-print {
   margin-block: 18px 0;
@@ -1138,23 +1158,23 @@ kbd {
   margin-block: 12px 8px;
 }
 .result-score > strong {
-  font: 700 7rem/0.9 var(--display);
+  font: 600 var(--instrument-size) / 0.9 var(--display);
   color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
 .result-score > span {
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: var(--label-size);
   letter-spacing: 0.08em;
   color: var(--text-secondary);
 }
 .result-panel h1 {
-  font-size: 3.8rem;
+  font-size: var(--title-size);
   margin-block: 16px 8px;
   text-transform: uppercase;
 }
 .result-panel > p:not(.notice):not(.best) {
-  font-size: 0.9rem;
+  font-size: var(--small-size);
   color: var(--text-secondary);
 }
 .result-breakdown {
@@ -1168,11 +1188,11 @@ kbd {
   gap: 5px;
 }
 .result-breakdown span {
-  font-size: 0.68rem;
+  font-size: var(--label-size);
   color: var(--text-muted);
 }
 .result-breakdown strong {
-  font: 600 1.6rem var(--display);
+  font: 600 var(--body-size) var(--display);
   font-variant-numeric: tabular-nums;
 }
 .reward-result {
@@ -1182,7 +1202,7 @@ kbd {
 }
 .reward-result h2 {
   font-family: var(--body);
-  font-size: 1rem;
+  font-size: var(--body-size);
   font-weight: 600;
   letter-spacing: 0;
   line-height: 1.5;
@@ -1191,12 +1211,12 @@ kbd {
   gap: 8px;
 }
 .reward-result p {
-  font-size: 0.85rem;
+  font-size: var(--small-size);
   color: var(--text-secondary);
   margin-block-start: 10px;
 }
 .reward-result h2.token-amount {
-  font: 600 3rem/1.2 var(--display);
+  font: 600 var(--title-size) / 1.2 var(--display);
   margin-block: 10px;
 }
 .result-panel .button {
@@ -1221,7 +1241,7 @@ kbd {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.8rem;
+  font-size: var(--small-size);
   min-height: 44px;
   margin-block-start: 14px;
 }
@@ -1236,7 +1256,7 @@ kbd {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  font-size: 0.75rem;
+  font-size: var(--label-size);
   color: var(--text-secondary);
   margin-block-end: 16px;
 }
@@ -1263,11 +1283,11 @@ kbd {
   gap: 20px;
 }
 .dialog-heading h2 {
-  font-size: 2.5rem;
+  font-size: var(--title-size);
 }
 .settings-dialog > p {
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: var(--small-size);
   margin-block: 12px 20px;
 }
 .setting-row {
@@ -1280,12 +1300,12 @@ kbd {
 }
 .setting-row strong {
   display: block;
-  font-size: 0.9rem;
+  font-size: var(--small-size);
 }
 .setting-row small {
   display: block;
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: var(--small-size);
   margin-block-start: 5px;
 }
 .setting-row input {
@@ -1363,9 +1383,6 @@ kbd {
     padding-inline-start: 24px;
     width: 55%;
   }
-  .hero-caption {
-    inset-inline-end: 12px;
-  }
   .mission {
     gap: 5%;
   }
@@ -1373,17 +1390,17 @@ kbd {
     gap: 18px;
   }
   .mission-stats strong {
-    font-size: 4.7rem;
+    font-size: var(--instrument-size);
   }
   .mission-stats p {
-    font-size: 0.75rem;
+    font-size: var(--label-size);
   }
   .district-copy {
     padding: 22px 18px;
   }
   .chapter {
     right: 12px;
-    font-size: 2.5rem;
+    font-size: var(--title-size);
   }
   .control-guide {
     gap: 24px;
@@ -1400,6 +1417,9 @@ kbd {
   }
 }
 @media (max-width: 760px) {
+  .landing {
+    --wordmark-size: clamp(2.8rem, 13vw, 5.7rem);
+  }
   .wrap {
     width: calc(100% - 40px);
   }
@@ -1411,7 +1431,7 @@ kbd {
     gap: 18px;
   }
   .site-header nav a {
-    font-size: 0.7rem;
+    font-size: var(--label-size);
   }
   .site-header nav a:first-child {
     display: none;
@@ -1433,10 +1453,10 @@ kbd {
     padding: 270px 24px 60px;
   }
   .hero-content .location {
-    font-size: 0.65rem;
+    font-size: var(--label-size);
   }
   .wordmark {
-    font-size: 6.5rem;
+    font-size: var(--wordmark-size);
     margin-block: 23px 25px;
   }
   .wordmark i {
@@ -1452,37 +1472,23 @@ kbd {
     letter-spacing: 0;
   }
   .hero-content .wordmark {
-    font-size: clamp(3.8rem, 12.5vw, 5.7rem);
+    font-size: var(--wordmark-size);
   }
   .tagline {
-    font-size: 0.9rem;
+    font-size: var(--small-size);
   }
   .hero-instruction {
     margin-block: 15px 21px;
   }
-  .hero-caption {
-    inset-block-start: 162px;
-    inset-block-end: auto;
-    inset-inline-end: 20px;
-  }
-  .hero-caption .eyebrow {
-    font-size: 0.58rem;
-  }
-  .hero-caption div > span:last-child {
-    font-size: 0.7rem;
-  }
-  .crosshair {
-    font-size: 26px;
-  }
   .motion-button {
     inset-inline-end: 12px;
     inset-block-start: 22px;
-    font-size: 0.65rem;
+    font-size: var(--label-size);
   }
   .hero-bottom {
     inset-inline: 24px;
     inset-block-end: 20px;
-    font-size: 0.52rem;
+    font-size: var(--label-size);
   }
   .hero-art {
     opacity: 0.96;
@@ -1493,8 +1499,8 @@ kbd {
     gap: 36px;
   }
   .section-intro h2 {
-    font-size: 3.5rem;
-    margin-block: 12px 19px;
+    font-size: var(--title-size);
+    margin-block: 0 19px;
   }
   .section-intro h2 br {
     display: none;
@@ -1512,11 +1518,11 @@ kbd {
     max-width: none;
   }
   .mission-stats strong {
-    font-size: 4.6rem;
+    font-size: var(--instrument-size);
   }
   .mission-stats strong span {
     margin-block: 8px 12px;
-    font-size: 0.55rem;
+    font-size: var(--label-size);
   }
   .mission-stats p {
     max-width: 125px;
@@ -1527,7 +1533,7 @@ kbd {
     gap: 10px;
   }
   .section-heading h2 {
-    font-size: 2rem;
+    font-size: var(--title-size);
   }
   .district-cards {
     grid-template-columns: 1fr;
@@ -1557,7 +1563,7 @@ kbd {
     padding-block: 45px;
   }
   .controls-section h2 {
-    font-size: 3rem;
+    font-size: var(--title-size);
   }
   .controls-section h2 br {
     display: none;
@@ -1591,10 +1597,10 @@ kbd {
     width: 24px;
   }
   .reward-heading h2 {
-    font-size: 2.25rem;
+    font-size: var(--title-size);
   }
   .reward-heading .eyebrow {
-    font-size: 0.55rem;
+    font-size: var(--label-size);
   }
   .reward-steps {
     grid-template-columns: 1fr;
@@ -1612,14 +1618,14 @@ kbd {
   }
   .reward-steps h3 {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: var(--small-size);
   }
   .reward-steps p {
     grid-column: 2;
-    font-size: 0.8rem;
+    font-size: var(--small-size);
   }
   .deployment-panel summary {
-    font-size: 0.75rem;
+    font-size: var(--label-size);
   }
   .contract-readout {
     flex-direction: column;
@@ -1635,7 +1641,7 @@ kbd {
   .address-row {
     grid-template-columns: 1fr auto 44px;
     gap: 10px;
-    font-size: 0.75rem;
+    font-size: var(--label-size);
   }
   .address-row code {
     grid-column: 1/4;
@@ -1655,7 +1661,7 @@ kbd {
     padding-block: 60px;
   }
   .closing h2 {
-    font-size: 3.4rem;
+    font-size: var(--title-size);
   }
   .site-footer {
     flex-wrap: wrap;
@@ -1680,13 +1686,13 @@ kbd {
     order: 3;
     flex-basis: 100%;
     text-align: center;
-    font-size: 0.65rem;
+    font-size: var(--label-size);
   }
   .game-header .brand {
     gap: 7px;
   }
   .game-header .brand > span {
-    font-size: 0.85rem;
+    font-size: var(--small-size);
   }
   .game-header .brand > svg {
     width: 24px;
@@ -1703,17 +1709,17 @@ kbd {
   .pause-button {
     padding: 9px !important;
     min-height: 40px !important;
-    font-size: 0.72rem !important;
+    font-size: var(--label-size) !important;
   }
   .game-hud {
     padding: 10px 16px;
     gap: 12px;
   }
   .game-hud strong {
-    font-size: 2.8rem;
+    font-size: var(--instrument-size);
   }
   .game-hud .eyebrow {
-    font-size: 0.55rem;
+    font-size: var(--label-size);
   }
   .hud-hull > div {
     gap: 5px;
@@ -1724,11 +1730,11 @@ kbd {
     height: 10px;
   }
   .hud-hull small {
-    font-size: 0.52rem;
-    white-space: nowrap;
+    font-size: var(--label-size);
+    white-space: normal;
   }
   .hud-timer small {
-    font-size: 0.55rem;
+    font-size: var(--label-size);
   }
   .canvas-stage {
     height: calc(100svh - 304px);
@@ -1746,15 +1752,15 @@ kbd {
     width: 100%;
   }
   .start-panel .wordmark {
-    font-size: 4.8rem;
+    font-size: var(--wordmark-size);
     margin-block: 20px;
   }
   .start-panel .location {
-    font-size: 0.6rem;
+    font-size: var(--label-size);
   }
   .start-panel .start-instruction {
     margin-block: 14px;
-    font-size: 1rem;
+    font-size: var(--body-size);
   }
   .start-controls {
     margin-block: 16px 0;
@@ -1764,7 +1770,7 @@ kbd {
     min-height: 48px;
   }
   .start-panel .fine-print {
-    font-size: 0.74rem;
+    font-size: var(--label-size);
   }
   .start-panel .best {
     margin-block-start: 10px;
@@ -1827,13 +1833,13 @@ kbd {
     right: 0;
     text-align: center;
     text-transform: uppercase;
-    font-size: 0.45rem;
+    font-size: var(--label-size);
     letter-spacing: 0.1em;
     color: var(--text-secondary);
     pointer-events: none;
   }
   .touch-hint {
-    font-size: 0.56rem;
+    font-size: var(--label-size);
     line-height: 1.7;
     letter-spacing: 0.04em;
     color: var(--text-muted);
@@ -1847,7 +1853,7 @@ kbd {
     border-radius: 50%;
     background: #3d3028;
     color: var(--text);
-    font-size: 0.65rem;
+    font-size: var(--label-size);
     font-weight: 600;
     line-height: 1.4;
     text-transform: uppercase;
@@ -1855,7 +1861,7 @@ kbd {
     flex-shrink: 0;
   }
   .fire-button span {
-    font-size: 32px;
+    font-size: var(--title-size);
     display: block;
     line-height: 1.1;
     color: var(--accent);
@@ -1871,30 +1877,30 @@ kbd {
     padding: 10px 0;
   }
   .overlay-card h1 {
-    font-size: 3.5rem;
+    font-size: var(--title-size);
   }
   .result-panel h1 {
-    font-size: 2.9rem;
+    font-size: var(--title-size);
   }
   .result-score > strong {
-    font-size: 5.7rem;
+    font-size: var(--instrument-size);
   }
   .result-breakdown {
     gap: 22px;
     margin-block: 20px;
   }
   .result-breakdown span {
-    font-size: 0.59rem;
+    font-size: var(--label-size);
   }
   .result-breakdown strong {
-    font-size: 1.4rem;
+    font-size: var(--body-size);
   }
   .reward-result {
     margin-block: 20px;
     padding-block: 16px;
   }
   .reward-result p {
-    font-size: 0.8rem;
+    font-size: var(--small-size);
   }
   .result-panel .button {
     width: 100%;
@@ -1905,13 +1911,16 @@ kbd {
   }
   .game-contracts .wallet-line {
     gap: 8px;
-    font-size: 0.67rem;
+    font-size: var(--label-size);
   }
   .settings-dialog {
     padding: 22px;
   }
 }
 @media (max-width: 380px) {
+  .landing {
+    --wordmark-size: min(4rem, 20vw);
+  }
   .wrap {
     width: calc(100% - 32px);
   }
@@ -1926,31 +1935,31 @@ kbd {
     width: calc(100% + 32px);
   }
   .hero-instruction {
-    font-size: 0.74rem;
+    font-size: var(--label-size);
   }
   .hero-content .location {
-    font-size: 0.57rem;
+    font-size: var(--label-size);
   }
   .play-note {
-    font-size: 0.62rem;
+    font-size: var(--label-size);
   }
   .mission-stats {
     gap: 15px;
   }
   .mission-stats strong {
-    font-size: 4rem;
+    font-size: var(--instrument-size);
   }
   .mission-stats p {
-    font-size: 0.68rem;
+    font-size: var(--label-size);
   }
   .district-copy {
     padding: 20px 16px;
   }
   .district-copy h3 {
-    font-size: 0.95rem;
+    font-size: var(--small-size);
   }
   .district-copy p {
-    font-size: 0.73rem;
+    font-size: var(--label-size);
   }
   .reward-section {
     padding-inline: 18px;
@@ -1959,7 +1968,7 @@ kbd {
     gap: 12px;
   }
   .reward-heading h2 {
-    font-size: 2rem;
+    font-size: var(--title-size);
   }
   .reward-heading .eyebrow {
     line-height: 1.7;
@@ -1968,20 +1977,17 @@ kbd {
     gap: 18px;
   }
   .control-guide p {
-    font-size: 0.75rem;
-  }
-  .hero-caption {
-    inset-inline-end: 10px;
+    font-size: var(--label-size);
   }
   .touch-controls {
     padding-inline: 18px;
   }
   .start-controls {
-    font-size: 0.6rem;
+    font-size: var(--label-size);
     gap: 6px;
   }
   .start-controls kbd {
-    font-size: 0.55rem;
+    font-size: var(--label-size);
   }
   .game-header {
     padding-inline: 10px;
@@ -2027,7 +2033,7 @@ kbd {
   .pad-label {
     display: block;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: var(--label-size);
   }
   .fire-button {
     width: 90px;
@@ -2039,11 +2045,11 @@ kbd {
   }
   .fire-button span {
     display: block;
-    font-size: 30px;
+    font-size: var(--body-size);
   }
   .touch-hint {
     color: var(--text-muted);
-    font-size: 0.75rem;
+    font-size: var(--label-size);
   }
   .touch-controls.inactive {
     visibility: hidden;
@@ -2053,25 +2059,105 @@ kbd {
   }
 }
 @media (max-height: 600px) and (min-width: 761px) {
-  .canvas-stage {
-    min-height: 330px;
-  }
   .start-panel .wordmark {
-    font-size: 4.5rem;
+    font-size: var(--wordmark-size);
     margin-block: 15px;
   }
   .start-overlay {
     padding-block: 20px;
   }
   .start-instruction {
-    font-size: 0.9rem;
+    font-size: var(--small-size);
     margin-block: 12px;
   }
   .start-controls {
     margin-block-start: 10px;
   }
   .start-panel .location {
-    font-size: 0.6rem;
+    font-size: var(--label-size);
+  }
+}
+@media (orientation: landscape) and (max-height: 600px) {
+  .game-shell:is(.phase-playing, .phase-paused) {
+    --instrument-size: 2rem;
+  }
+  .game-header {
+    min-height: 52px;
+    padding: 4px 16px;
+    flex-wrap: nowrap;
+  }
+  .game-mode {
+    order: initial;
+    flex-basis: auto;
+  }
+  .game-toolbar .icon-button,
+  .game-toolbar .pause-button {
+    min-width: 44px;
+    min-height: 44px !important;
+  }
+  .game-hud {
+    padding: 4px 20px;
+    gap: 16px;
+    align-items: center;
+  }
+  .hud-timer,
+  .hud-cargo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hud-cargo {
+    justify-content: flex-end;
+  }
+  .hud-hull {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+  }
+  .hud-hull > div {
+    margin: 0;
+  }
+  .hud-hull small {
+    grid-column: 1 / -1;
+    line-height: 1.2;
+  }
+  .touch-controls {
+    min-height: 0;
+    padding: 4px 32px;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .movement-pad {
+    width: 80px;
+    height: 80px;
+  }
+  .thumb {
+    left: calc(50% - 22px);
+    top: calc(50% - 22px);
+    width: 44px;
+    height: 44px;
+  }
+  .pad-label {
+    position: absolute;
+    inset: auto 0 0;
+    font-size: var(--label-size);
+    line-height: 1.2;
+    text-align: center;
+    pointer-events: none;
+  }
+  .fire-button {
+    width: 72px;
+    height: 72px;
+    font-size: var(--label-size);
+  }
+  .fire-button span {
+    font-size: var(--body-size);
+  }
+  .game-overlay {
+    align-items: flex-start;
+    overscroll-behavior: contain;
   }
 }
 @media (forced-colors: active) {
@@ -2097,9 +2183,6 @@ kbd {
   margin-block-start: 8px;
 }
 @media (max-width: 760px) {
-  .hero-caption {
-    display: none;
-  }
   .hero {
     min-height: 690px;
   }
@@ -2110,12 +2193,12 @@ kbd {
     padding-block-end: 60px;
   }
   .hero-instruction {
-    font-size: 0.82rem;
+    font-size: var(--small-size);
   }
 }
 @media (max-width: 760px) {
   .hero-content .wordmark {
-    font-size: clamp(2.8rem, 13vw, 5.7rem);
+    font-size: var(--wordmark-size);
   }
 }
 @media (max-width: 380px) {
@@ -2126,7 +2209,7 @@ kbd {
     margin-inline-start: 0;
   }
   .hero-content .wordmark {
-    font-size: 4rem;
+    font-size: var(--wordmark-size);
   }
   .hero-content .wordmark i {
     width: 100%;
@@ -2134,7 +2217,7 @@ kbd {
 }
 @media (max-width: 380px) {
   .hero-content .wordmark {
-    font-size: min(4rem, 20vw);
+    font-size: var(--wordmark-size);
   }
 }
 @media (max-width: 760px) {
@@ -2153,10 +2236,10 @@ kbd {
   }
   .mission-stats > div {
     min-width: 0;
-    flex: 1 1 80px;
+    flex: 1 1 5rem;
   }
   .mission-stats strong {
-    font-size: min(4.6rem, 20vw);
+    font-size: var(--instrument-size);
   }
   .mission-stats p {
     overflow-wrap: anywhere;

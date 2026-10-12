@@ -40,6 +40,8 @@ The host session must supply the documented `playing` state, seed, rules hash an
 
 Results distinguish local points, checking, queued, verified-but-unpaid, expired, rejected, uncertain transaction and confirmed claimed states. Only a valid nonzero host voucher can enable Claim. The UI checks the playing wallet, chain, rules, nonzero session/release hashes, policy cap, deadline, season close, funding and the contract’s claimed marker. It rechecks before requesting a claim. It never computes a token entitlement from the local score. Claims stay disabled until the receipt and on-chain claimed state agree. An uncertain transaction requires an explicit status check, not automatic rebroadcast.
 
+If a voucher expires while its wallet request or receipt check is pending, the result keeps “Confirming claim…” and explains that confirmation is pending. It retains the original voucher/session and blocks Play again until the outcome is known. A confirmed cancellation after expiry resolves the expired reward; an uncertain response keeps status recovery available.
+
 Queued verification polls 2.1 seconds apart for at most 60 seconds, then offers Retry. The simulation freezes while paused, while the five-minute server expiry still runs. Visibility loss, resize, blur, stalled rendering and interrupted touches pause safely. When storage is available, legal input checkpoints can restore a session matching its seed, ID and expiry. Opaque sandbox frames generally deny storage: in that case progress stays in memory, and an unfinished session can restart from the same seed before its original expiry. Keep the tab open during a run. Verified rewards remain recoverable using the host’s **My reward** or the in-game **Recover a run or reward** control, including when the pool is empty.
 
 ## Wallet and creator boundaries
@@ -58,6 +60,8 @@ The live read at validation time found **0 LOOT in the vault**. New rewarded run
 
 WASD/arrows move; Space fires; Escape pauses/resumes. On touch screens, the left pad and right fire button support two simultaneous pointers, with pointer capture and a separate lower control strip so thumbs do not hide the rig. Settings provide mute, reduced effects and scenery-motion controls; reduced motion is respected by default. Gamepad support was optional and is not included.
 
+Active play uses the available viewport height, including compact landscape phones. The toolbar, HUD, arena and both touch controls stay visible together; rotating pauses safely. Menu and result content remain scrollable.
+
 Canvas artwork, the rig silhouette, drones, harbor, billboard canyon, approach lighting and synthesized audio are original source in `src/game/`. The actual renderer also produces the cover; it does not imply a different visual fidelity. Fonts are bundled WOFF2 under their OFL licenses. Attribution is in `THIRD_PARTY.md` and `public/licenses/`.
 
 To regenerate the cover (normally unnecessary):
@@ -74,6 +78,7 @@ npm --prefix web run build
 npm --prefix web run typecheck
 npm --prefix web test
 PLAYWRIGHT_BROWSERS_PATH=/tmp/skyline-playwright npm --prefix web run test:browser
+PLAYWRIGHT_BROWSERS_PATH=/tmp/skyline-playwright node web/tests/revision.mjs
 npm --prefix web run verify
 node web/scripts/check-rpc.mjs
 ```
@@ -81,6 +86,10 @@ node web/scripts/check-rpc.mjs
 For a local interactive demo, run `node web/tests/server.mjs 4173` from the repository root and open `http://127.0.0.1:4173/host?preview=true`. This test host supplies the real iframe handshake; the production page cannot be enabled by a query parameter.
 
 The browser suite starts a temporary local static server under `/preview/`, uses the real committed production export in an opaque sandbox iframe, and mocks only the external host/wallet/RPC. Its fixture is **not** shipped to `dist/`. It tests complete deterministic runs, keyboard and multi-touch, pause/resume/expiry, wallet cancellation, recovery, verification polling, claim confirmation/uncertainty and safety gates. It produces `docs/validation/browser-tests.json` and a result screenshot. `web/tests/inspect.mjs` captures the landing page and mobile gameplay. Test code and replay fixtures are clearly test-only; no live claims were broadcast.
+
+The revision suite adds landscape geometry/two-touch tests, portrait rotation, voucher expiry during a held host request and delayed receipt, cancellation and uncertain-response recovery, plus computed type-scale and copy checks. Evidence is under `docs/validation/revision/`; see `docs/REVISION.md` for the four review responses and limitations.
+
+On workers with a short command limit, run the existing browser suite as two separate commands with `SKYLINE_BROWSER_SHARD=1/2` and `SKYLINE_BROWSER_SHARD=2/2`, then run `node web/tests/merge-browser.mjs`. This executes the same 24 checks. The merger requires both reports to match the current deployment-manifest hash, checks unique test coverage and rejects failures.
 
 The existing Solidity suite was also run with build/cache outputs under `/tmp`; its 62 test results include duplicate, cross-chain/cross-vault, wrong-player, underfunding, expiry and owner recovery checks. See `../docs/VALIDATION.md` for exact commands, review findings and limitations, and `../docs/DESIGN.md` for the final design system.
 

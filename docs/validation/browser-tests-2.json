@@ -1,0 +1,124 @@
+{
+  "startedAt": "2026-10-12T19:51:46.911Z",
+  "browser": "141.0.7390.37",
+  "manifestSha256": "23fb7d89052666ae2deef8505753824c71948b6e033209738b65be0d5db71036",
+  "kind": "Production static export; sandboxed opaque iframe; mocked wallet/host/RPC. No transactions broadcast.",
+  "tests": [
+    {
+      "name": "desktop/mobile/320px reflow, 200% text, keyboard focus, contrast and accessibility",
+      "passed": true,
+      "durationMs": 4626
+    },
+    {
+      "name": "one-shot parent init survives asynchronous deployment loading",
+      "passed": true,
+      "durationMs": 961
+    },
+    {
+      "name": "review demo runs with zero public RPC or reward-service requests",
+      "passed": true,
+      "durationMs": 1487
+    },
+    {
+      "name": "demo full extraction, loss, retained points and restart use frozen physics",
+      "passed": true,
+      "durationMs": 68530
+    },
+    {
+      "name": "settings: focus trap, sound toggle, reduced motion/effects, close returns focus",
+      "passed": true,
+      "durationMs": 4384
+    },
+    {
+      "name": "funded hosted gameplay uploads one replay; queued result polls, then claim confirms",
+      "passed": true,
+      "durationMs": 32438
+    },
+    {
+      "name": "claims disabled for expired",
+      "passed": true,
+      "durationMs": 2108
+    },
+    {
+      "name": "claims disabled for tampered rules",
+      "passed": true,
+      "durationMs": 2162
+    },
+    {
+      "name": "empty pool blocks new runs but keeps saved-reward recovery available",
+      "passed": true,
+      "durationMs": 1992
+    },
+    {
+      "name": "signed zero reward resolves without a fake claim or calculated token amount",
+      "passed": true,
+      "durationMs": 2640
+    },
+    {
+      "name": "queued verification stops automatically after 60 seconds and offers retry",
+      "passed": true,
+      "durationMs": 39464
+    },
+    {
+      "name": "iframe menu, pause and settings accessibility; prefers-reduced-motion default",
+      "passed": true,
+      "durationMs": 3587
+    }
+  ],
+  "measurements": {
+    "reflow": [
+      {
+        "viewport": 1440,
+        "scroll": 1440
+      },
+      {
+        "viewport": 900,
+        "scroll": 900
+      },
+      {
+        "viewport": 760,
+        "scroll": 760
+      },
+      {
+        "viewport": 390,
+        "scroll": 390
+      },
+      {
+        "viewport": 320,
+        "scroll": 320
+      }
+    ],
+    "landingAxe": [],
+    "colors": [
+      {
+        "name": "Body",
+        "foreground": "rgb(181, 192, 194)",
+        "background": "rgb(11, 20, 27)",
+        "ratio": 9.984455264353842
+      },
+      {
+        "name": "Muted",
+        "foreground": "rgb(139, 157, 165)",
+        "background": "rgb(11, 20, 27)",
+        "ratio": 6.604534279009055
+      },
+      {
+        "name": "Primary",
+        "foreground": "rgb(11, 20, 27)",
+        "background": "rgb(255, 133, 69)",
+        "ratio": 7.692067792525259
+      },
+      {
+        "name": "Card",
+        "foreground": "rgb(181, 192, 194)",
+        "background": "rgb(17, 30, 39)",
+        "ratio": 9.10820895971368
+      }
+    ],
+    "iframeAxe": []
+  },
+  "consoleErrors": [],
+  "finishedAt": "2026-10-12T19:54:31.300Z",
+  "passed": 12,
+  "failed": 0
+}

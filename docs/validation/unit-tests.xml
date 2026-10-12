@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuites>
-	<testcase name="frozen engine bytes match the approved rulesHash exactly" time="0.010452" classname="test"/>
-	<testcase name="deterministic replay: seed 20261012, input 0" time="0.005763" classname="test"/>
-	<testcase name="deterministic replay: seed 20261012, input 16" time="0.012059" classname="test"/>
-	<testcase name="deterministic replay: seed 20261012, input 18" time="0.008779" classname="test"/>
-	<testcase name="malformed, oversized, illegal and unfinished transcripts fail closed" time="0.000656" classname="test"/>
-	<testcase name="movement and firing preserve the engine coordinate system" time="0.000594" classname="test"/>
-	<testcase name="collision removes one hull and gives the actual 45-tick damage grace" time="0.000286" classname="test"/>
-	<testcase name="a destruction scores automatically; there is no pickup or entitlement in the engine" time="0.000201" classname="test"/>
-	<testcase name="only a valid, funded, wallet-bound, unexpired voucher is claimable" time="0.000915" classname="test"/>
-	<testcase name="amount and date formatting never assumes raw units are display units" time="0.009511" classname="test"/>
-	<testcase name="combined thumb, keyboard and fire inputs produce legal engine bits" time="0.000308" classname="test"/>
-	<testcase name="actionable errors cover rejection, chain, funding, expiry and uncertain transactions" time="0.000601" classname="test"/>
+	<testcase name="frozen engine bytes match the approved rulesHash exactly" time="0.076209" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/engine.test.mjs"/>
+	<testcase name="deterministic replay: seed 20261012, input 0" time="0.085234" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/engine.test.mjs"/>
+	<testcase name="deterministic replay: seed 20261012, input 16" time="0.104692" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/engine.test.mjs"/>
+	<testcase name="deterministic replay: seed 20261012, input 18" time="0.025282" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/engine.test.mjs"/>
+	<testcase name="malformed, oversized, illegal and unfinished transcripts fail closed" time="0.066939" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/engine.test.mjs"/>
+	<testcase name="movement and firing preserve the engine coordinate system" time="0.003906" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/engine.test.mjs"/>
+	<testcase name="collision removes one hull and gives the actual 45-tick damage grace" time="0.000705" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/engine.test.mjs"/>
+	<testcase name="a destruction scores automatically; there is no pickup or entitlement in the engine" time="0.000327" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/engine.test.mjs"/>
+	<testcase name="only a valid, funded, wallet-bound, unexpired voucher is claimable" time="0.062719" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/safety.test.mjs"/>
+	<testcase name="amount and date formatting never assumes raw units are display units" time="0.102422" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/safety.test.mjs"/>
+	<testcase name="combined thumb, keyboard and fire inputs produce legal engine bits" time="0.000469" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/safety.test.mjs"/>
+	<testcase name="actionable errors cover rejection, chain, funding, expiry and uncertain transactions" time="0.001428" classname="test" file="/home/imd-worker/.identitymd/work/ea1b99e8-3969-4348-ab5d-f56d5f5917fb/62eaf5d4-3aae-4d0b-b98a-21eb6bd7e83e/web/tests/safety.test.mjs"/>
 	<!-- tests 12 -->
 	<!-- suites 0 -->
 	<!-- pass 12 -->
@@ -19,5 +19,5 @@
 	<!-- cancelled 0 -->
 	<!-- skipped 0 -->
 	<!-- todo 0 -->
-	<!-- duration_ms 624.635137 -->
+	<!-- duration_ms 4788.450976 -->
 </testsuites>

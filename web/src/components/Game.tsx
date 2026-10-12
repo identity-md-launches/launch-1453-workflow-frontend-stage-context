@@ -63,10 +63,11 @@ export function Game({ config }: { config: Config }) {
     expires !== null &&
     (now > expires || (chain !== null && now > chain.closesAt * 1000));
   const resolved =
-    v.preview ||
-    ["expired", "rejected", "paid"].includes(v.verification) ||
-    (signed && !voucher) ||
-    rewardExpired;
+    !v.claimPending &&
+    (v.preview ||
+      ["expired", "rejected", "paid"].includes(v.verification) ||
+      (signed && !voucher) ||
+      rewardExpired);
   const runBlocked =
     !v.preview &&
     (!chain ||
@@ -380,26 +381,29 @@ export function Game({ config }: { config: Config }) {
                           </p>
                         </>
                       )}
-                      {signed && voucher && !rewardExpired && (
-                        <>
-                          <span className="eyebrow">
-                            Verified reward · not yet paid
-                          </span>
-                          <h2 className="token-amount">
-                            {amount(voucher.amount, chain?.decimals ?? 18)} LOOT
-                          </h2>
-                          <p>
-                            {expires
-                              ? `Claim by ${new Date(expires).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}.`
-                              : "Reward expiry is unavailable."}{" "}
-                            You pay Ethereum gas; your wallet shows the fee
-                            before confirmation.
-                          </p>
-                          <p className="fine-print">
-                            USD context is unavailable.
-                          </p>
-                        </>
-                      )}
+                      {signed &&
+                        voucher &&
+                        (!rewardExpired || v.claimPending) && (
+                          <>
+                            <span className="eyebrow">
+                              Verified reward · not yet paid
+                            </span>
+                            <h2 className="token-amount">
+                              {amount(voucher.amount, chain?.decimals ?? 18)}{" "}
+                              LOOT
+                            </h2>
+                            <p>
+                              {expires
+                                ? `Claim by ${new Date(expires).toLocaleString("en-US", { dateStyle: "medium", timeStyle: "short" })}.`
+                                : "Reward expiry is unavailable."}{" "}
+                              You pay Ethereum gas; your wallet shows the fee
+                              before confirmation.
+                            </p>
+                            <p className="fine-print">
+                              USD context is unavailable.
+                            </p>
+                          </>
+                        )}
                       {signed && !voucher && (
                         <>
                           <h2>Run verified</h2>
@@ -430,15 +434,25 @@ export function Game({ config }: { config: Config }) {
                           </p>
                         </>
                       )}
-                      {(v.verification === "expired" || rewardExpired) && (
+                      {v.claimPending && rewardExpired && (
                         <>
-                          <h2>Reward window expired</h2>
+                          <h2>Claim confirmation pending</h2>
                           <p>
-                            Your score is kept. This run can no longer be
-                            claimed.
+                            Check your wallet. Keep this result open until the
+                            claim outcome is known.
                           </p>
                         </>
                       )}
+                      {!v.claimPending &&
+                        (v.verification === "expired" || rewardExpired) && (
+                          <>
+                            <h2>Reward window expired</h2>
+                            <p>
+                              Your score is kept. This run can no longer be
+                              claimed.
+                            </p>
+                          </>
+                        )}
                       {v.verification === "rejected" && (
                         <>
                           <h2>Run could not be verified</h2>
@@ -455,43 +469,46 @@ export function Game({ config }: { config: Config }) {
                 <p className="notice" role="status">
                   {v.error}
                 </p>
-                {signed && voucher && !paid && !rewardExpired && (
-                  <>
-                    {(wrongChain || problem) && (
-                      <p className="notice">
-                        {wrongChain
-                          ? "Switch to Ethereum using the wallet controls in Pepe2Pepe, then refresh your wallet."
-                          : problem}
-                      </p>
-                    )}
-                    <button
-                      className="button primary"
-                      disabled={
-                        v.claimPending ||
-                        !!problem ||
-                        !!wrongChain ||
-                        game.chainLoading
-                      }
-                      onClick={() => void game.claim()}
-                    >
-                      {v.claimPending
-                        ? "Confirming claim…"
-                        : `Claim ${amount(voucher.amount, chain?.decimals ?? 18)} LOOT`}
-                      <Icon name="arrow" />
-                    </button>
-                    {(wrongChain || problem) && (
+                {signed &&
+                  voucher &&
+                  !paid &&
+                  (!rewardExpired || v.claimPending) && (
+                    <>
+                      {!v.claimPending && (wrongChain || problem) && (
+                        <p className="notice">
+                          {wrongChain
+                            ? "Switch to Ethereum using the wallet controls in Pepe2Pepe, then refresh your wallet."
+                            : problem}
+                        </p>
+                      )}
                       <button
-                        className="button secondary"
-                        disabled={!!v.pendingAction}
-                        onClick={() => void game.recover()}
+                        className="button primary"
+                        disabled={
+                          v.claimPending ||
+                          !!problem ||
+                          !!wrongChain ||
+                          game.chainLoading
+                        }
+                        onClick={() => void game.claim()}
                       >
-                        {v.pendingAction
-                          ? "Refreshing…"
-                          : "Refresh wallet & reward"}
+                        {v.claimPending
+                          ? "Confirming claim…"
+                          : `Claim ${amount(voucher.amount, chain?.decimals ?? 18)} LOOT`}
+                        <Icon name="arrow" />
                       </button>
-                    )}
-                  </>
-                )}
+                      {!v.claimPending && (wrongChain || problem) && (
+                        <button
+                          className="button secondary"
+                          disabled={!!v.pendingAction}
+                          onClick={() => void game.recover()}
+                        >
+                          {v.pendingAction
+                            ? "Refreshing…"
+                            : "Refresh wallet & reward"}
+                        </button>
+                      )}
+                    </>
+                  )}
                 {["error", "uncertain"].includes(v.verification) ||
                 (v.verification === "queued" && !v.pendingAction) ? (
                   <button

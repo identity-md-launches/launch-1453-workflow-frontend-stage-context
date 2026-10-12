@@ -1,0 +1,327 @@
+{
+  "browser": "141.0.7390.37",
+  "measurements": {
+    "landscape": {
+      "innerHeight": 390,
+      "scrollHeight": 639,
+      "boxes": {
+        ".game-header": {
+          "y": -249,
+          "height": 66,
+          "bottom": -183
+        },
+        ".game-hud": {
+          "y": -183,
+          "height": 100.59375,
+          "bottom": -82.40625
+        },
+        ".canvas-stage": {
+          "y": -82.40625,
+          "height": 330,
+          "bottom": 247.59375
+        },
+        ".touch-controls": {
+          "y": 247.59375,
+          "height": 142,
+          "bottom": 389.59375
+        }
+      }
+    },
+    "expiredPending": {
+      "pendingClaim": true,
+      "confirmingButtons": 0,
+      "playAgainEnabled": true,
+      "resetWhilePending": true
+    },
+    "typography": [
+      {
+        "width": 390,
+        "sizes": {
+          "16px": [
+            "Skip to content"
+          ],
+          "17.92px": [
+            "SkylineHeist",
+            "Heist"
+          ],
+          "11.2px": [
+            "How to play",
+            "LOOT rewards",
+            "An original arcade escape.Built for a clean shot and one mor"
+          ],
+          "10.4px": [
+            "Neon Harbor · After dark",
+            "Resume scenery",
+            "01",
+            "02",
+            "03"
+          ],
+          "50.7px": [
+            "SkylineHeist",
+            "Heist"
+          ],
+          "14.4px": [
+            "Sixty seconds. Three hull bars.One way out.",
+            "Play on Pepe2Pepe",
+            "You have the city’s master data-core. The security drones wa",
+            "Keyboard",
+            "Touch",
+            "Play a free run",
+            "Get your run verified",
+            "Claim after the action",
+            "Play on Pepe2Pepe"
+          ],
+          "13.12px": [
+            "Move. Shoot drones. Survive 60 seconds."
+          ],
+          "11.36px": [
+            "Free entry. Connect your wallet on Pepe2Pepe."
+          ],
+          "8.32px": [
+            "01 / NEON HARBOR",
+            "EXTRACTION IN 00:60"
+          ],
+          "12px": [
+            "One stolen core. A city on your tail.",
+            "Hold out for extraction.",
+            "Make every near miss count.",
+            "Keep the points. Even if you go down.",
+            "No detours. No upgrades.",
+            "W",
+            "A",
+            "S",
+            "D",
+            "Space",
+            "Esc",
+            "Live reward pool & contract details ＋",
+            "＋",
+            "The drones aren’t slowing down.",
+            "Release manifest"
+          ],
+          "56px": [
+            "Make yourexit count.",
+            "exit count."
+          ],
+          "73.6px": [
+            "60SEC",
+            "03HULL",
+            "01WAY OUT"
+          ],
+          "8.8px": [
+            "SEC",
+            "HULL",
+            "WAY OUT",
+            "The getaway is the reward. There’s LOOT, too."
+          ],
+          "32px": [
+            "One district. Three stretches."
+          ],
+          "10px": [
+            "Your route to extraction",
+            "00—20 SEC",
+            "20—40 SEC",
+            "40—60 SEC"
+          ],
+          "16.8px": [
+            "Waterfront lanes",
+            "Billboard canyon",
+            "The last approach"
+          ],
+          "12.8px": [
+            "Amber lamps. Ink-blue canals.Find your opening.",
+            "Cold light. Close calls.Stay on target.",
+            "The harbor falls away.Bring the core home.",
+            "or arrow keys to move",
+            "Space fire Esc pause",
+            "Left thumb steers.Right thumb fires.",
+            "Both controls work together. Keep firing as you move.",
+            "Pepe2Pepe connects your wallet and checks reward availabilit",
+            "One LOOT per verified point, up to 100 per run. Both endings",
+            "Confirm the amount, expiry and wallet gas fee. Claiming is a"
+          ],
+          "24px": [
+            "NH"
+          ],
+          "48px": [
+            "Just you andthe escape route."
+          ],
+          "13.6px": [
+            "Every drone destroyed adds one cargo point. The core burst c"
+          ],
+          "34px": [
+            "⊕"
+          ],
+          "36px": [
+            "Play sharp. Claim your cargo."
+          ],
+          "54.4px": [
+            "Neither should you."
+          ]
+        },
+        "weights": [
+          "400",
+          "700",
+          "600",
+          "800",
+          "500"
+        ]
+      },
+      {
+        "width": 1440,
+        "sizes": {
+          "16px": [
+            "Skip to content",
+            "Sixty seconds. Three hull bars.One way out.",
+            "SkylineHeist",
+            "Heist"
+          ],
+          "17.92px": [
+            "SkylineHeist",
+            "Heist"
+          ],
+          "12.8px": [
+            "The mission",
+            "How to play",
+            "LOOT rewards",
+            "Keep the rig moving.",
+            "Hold out for extraction.",
+            "Make every near miss count.",
+            "Keep the points. Even if you go down.",
+            "Amber lamps. Ink-blue canals.Find your opening.",
+            "Cold light. Close calls.Stay on target.",
+            "The harbor falls away.Bring the core home.",
+            "or arrow keys to move",
+            "Space fire Esc pause",
+            "Left thumb steers.Right thumb fires.",
+            "Both controls work together. Keep firing as you move.",
+            "Pepe2Pepe connects your wallet and checks reward availabilit",
+            "One LOOT per verified point, up to 100 per run. Both endings",
+            "Confirm the amount, expiry and wallet gas fee. Claiming is a",
+            "Live reward pool & contract details ＋",
+            "＋"
+          ],
+          "10px": [
+            "A NEON GETAWAY ARCADE",
+            "01 / NEON HARBOR",
+            "EXTRACTION IN 00:60",
+            "Your route to extraction",
+            "00—20 SEC",
+            "20—40 SEC",
+            "40—60 SEC",
+            "The getaway is the reward. There’s LOOT, too."
+          ],
+          "12px": [
+            "Neon Harbor · After dark",
+            "One stolen core. A city on your tail.",
+            "No detours. No upgrades.",
+            "W",
+            "A",
+            "S",
+            "D",
+            "Space",
+            "Esc",
+            "The drones aren’t slowing down.",
+            "Release manifest"
+          ],
+          "149.76px": [
+            "SkylineHeist",
+            "Heist"
+          ],
+          "13.44px": [
+            "Move. Shoot drones. Survive 60 seconds."
+          ],
+          "14.4px": [
+            "Play on Pepe2Pepe",
+            "You have the city’s master data-core. The security drones wa",
+            "Keyboard",
+            "Touch",
+            "Play on Pepe2Pepe"
+          ],
+          "11.36px": [
+            "Free entry. Connect your wallet on Pepe2Pepe.",
+            "Resume scenery"
+          ],
+          "34px": [
+            "＋",
+            "⊕"
+          ],
+          "10.72px": [
+            "The cargo is hot."
+          ],
+          "66.24px": [
+            "Make yourexit count.",
+            "exit count."
+          ],
+          "88px": [
+            "60SEC",
+            "03HULL",
+            "01WAY OUT"
+          ],
+          "10.24px": [
+            "SEC",
+            "HULL",
+            "WAY OUT"
+          ],
+          "32px": [
+            "One district. Three stretches."
+          ],
+          "16.8px": [
+            "Waterfront lanes",
+            "Billboard canyon",
+            "The last approach"
+          ],
+          "51.2px": [
+            "01",
+            "02",
+            "03"
+          ],
+          "24px": [
+            "NH"
+          ],
+          "49.6px": [
+            "Just you andthe escape route."
+          ],
+          "13.6px": [
+            "Every drone destroyed adds one cargo point. The core burst c"
+          ],
+          "41.6px": [
+            "Play sharp. Claim your cargo."
+          ],
+          "10.4px": [
+            "01",
+            "02",
+            "03"
+          ],
+          "13.92px": [
+            "Play a free run",
+            "Get your run verified",
+            "Claim after the action"
+          ],
+          "64px": [
+            "Neither should you."
+          ],
+          "11.2px": [
+            "An original arcade escape.Built for a clean shot and one mor"
+          ],
+          "8.8px": [
+            "NEON HARBOR / RELEASE 01"
+          ]
+        },
+        "weights": [
+          "400",
+          "700",
+          "500",
+          "600",
+          "800"
+        ]
+      }
+    ],
+    "slogans": [
+      "＋The cargo is hot.Keep the rig moving.",
+      "One stolen core. A city on your tail.",
+      "No detours. No upgrades.",
+      "The getaway is the reward. There’s LOOT, too.",
+      "The drones aren’t slowing down."
+    ]
+  }
+}

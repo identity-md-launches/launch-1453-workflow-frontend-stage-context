@@ -8,14 +8,17 @@ await import("./verify-export.mjs");
 const git = (args) =>
   execFileSync("git", args, { cwd: root, encoding: "utf8" }).trim();
 const h = await readJson(resolve(root, "web/config/deployment.json"));
-const changed = [...new Set([
-  ...git(["diff", "--name-only", h.sourceCommit]).split("\n"),
-  ...git(["ls-files", "--others", "--exclude-standard"]).split("\n"),
-])].filter(Boolean);
+const changed = [
+  ...new Set([
+    ...git(["diff", "--name-only", h.sourceCommit]).split("\n"),
+    ...git(["ls-files", "--others", "--exclude-standard"]).split("\n"),
+  ]),
+].filter(Boolean);
 const allowed = (path) =>
-  /^(web|dist|docs)\//.test(path) &&
-  (path === "web/.gitignore" ||
-    !path.split("/").some((s) => s.startsWith(".")));
+  path === ".imd-responses.json" ||
+  (/^(web|dist|docs)\//.test(path) &&
+    (path === "web/.gitignore" ||
+      !path.split("/").some((s) => s.startsWith("."))));
 assert(changed.every(allowed), "Out-of-scope changed path");
 const tracked = git(["ls-files"]).split("\n");
 assert(
@@ -51,6 +54,8 @@ const m = await readJson(resolve(dist, "imd-deployment.json")),
   browser = await readJson(resolve(root, "docs/validation/browser-tests.json"));
 assert.equal(browser.failed, 0);
 assert.equal(browser.passed, 24);
+const manifestSha256 = sha256(await readFile(resolve(dist, "imd-deployment.json")));
+assert.equal(browser.manifestSha256, manifestSha256);
 const contracts = await readJson(
   resolve(root, "docs/validation/contract-tests.json"),
 );
@@ -85,6 +90,13 @@ const report = {
   },
   assets,
 };
+const revision = await readJson(
+  resolve(root, "docs/validation/revision/regressions.json"),
+);
+assert.equal(revision.failed, 0);
+assert.equal(revision.errors.length, 0);
+assert.equal(revision.manifestSha256, manifestSha256);
+report.workerChecks.revisionPassed = revision.passed;
 await writeFile(
   resolve(root, "docs/validation/export-audit.json"),
   JSON.stringify(report, null, 2) + "\n",
