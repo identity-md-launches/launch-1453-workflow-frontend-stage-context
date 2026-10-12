@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-12T18:17:16.812Z",
+  "rpc": "https://ethereum-rpc.publicnode.com",
+  "chainId": 1,
+  "blockNumber": "26178131",
+  "blockTimestamp": "2026-10-12T18:17:11.000Z",
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "address": "0x0692a2313f31852b041dd733d89126a714a6fcd1",
+      "bytes": 1753,
+      "runtimeKeccak": "0x9eab9ee41316d67971cd0d157d2a2c9d4e2636db8844c591cce01288a882eec4"
+    },
+    {
+      "name": "Game",
+      "address": "0x7fa95d111b4cbb5685ead11dee2ecf8a8634fd2c",
+      "bytes": 3915,
+      "runtimeKeccak": "0x7135311628e1bae76c62eb5d2b99194967961f29e628bd3dbb78f5bfc2c29aad"
+    }
+  ],
+  "getters": {
+    "owner": "0x0A5b0e232d47541eB503bC862a9DB2672b8fBa24",
+    "token": "0x0692A2313f31852b041dd733D89126A714a6FCd1",
+    "signer": "0x345b9E44DC9Ea841ea589Fb7E0907139fa687a20",
+    "rulesHash": "0x6a126dc671dbed043943f72f26c072f71bc7095efd3d0affa4ca4cb56bfcace8",
+    "rewardPerPoint": "1000000000000000000",
+    "maxReward": "100000000000000000000",
+    "closesAt": "1823363459",
+    "symbol": "LOOT",
+    "decimals": 18,
+    "vaultBalance": "0"
+  },
+  "transactionsBroadcast": 0
+}

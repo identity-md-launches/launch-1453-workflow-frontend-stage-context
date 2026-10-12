@@ -1,0 +1,38 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { readFile } from "node:fs/promises";
+export default defineConfig({
+  base: "./",
+  plugins: [
+    react(),
+    {
+      name: "serve-verified-runtime-config-in-development",
+      configureServer(server) {
+        server.middlewares.use(async (req, res, next) => {
+          const path = (req.url ?? "").split("?")[0];
+          if (
+            !/^\/(?:imd-deployment|pepe-game)\.json$/.test(path) &&
+            !/^\/abi\/[A-Za-z][A-Za-z0-9]*\.json$/.test(path)
+          )
+            return next();
+          try {
+            const bytes = await readFile(
+              new URL(`../dist${path}`, import.meta.url),
+            );
+            res.setHeader("Content-Type", "application/json");
+            res.end(bytes);
+          } catch {
+            res.statusCode = 404;
+            res.end("Run npm run build before starting development.");
+          }
+        });
+      },
+    },
+  ],
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true,
+    target: "es2022",
+    assetsInlineLimit: 0,
+  },
+});

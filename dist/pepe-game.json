@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "pepe-onchain-game/1",
+  "title": "SKYLINE HEIST",
+  "version": "1.0.0",
+  "summary": "Sixty seconds. Three hull bars. One way out.",
+  "description": "Pilot an ivory hover-rig through Neon Harbor. Dodge security drones, fire forward and survive sixty seconds to extraction. Destroyed drones add cargo points automatically; either ending keeps your score. Hosted verified play pays from a funded LOOT vault.",
+  "controls": "WASD or arrows move. Hold Space to fire. Escape pauses. Touch: left thumb pad moves, right button fires.",
+  "genre": "arcade",
+  "players": 1,
+  "mobile": true,
+  "entry": "index.html",
+  "cover": "cover.webp",
+  "onchain": {
+    "chainId": 1,
+    "launchId": "0cc11429-5331-4902-a9f4-0fc6b9ab82ab",
+    "creator": "0x0a5b0e232d47541eb503bc862a9db2672b8fba24",
+    "game": "0x7fa95d111b4cbb5685ead11dee2ecf8a8634fd2c",
+    "token": "0x0692a2313f31852b041dd733d89126a714a6fcd1",
+    "allocation": "0x67b31cfc35b477b8bcdf3458b713fac759a8b1b6",
+    "trading": "0xfaa338c0c43db69cf0a5261fcc13208c7f7eac09",
+    "splitFactory": "0x75e7efce0d211f9d1876e32e7f09914affc1caf6",
+    "platform": "0x0a5b0e232d47541eb503bc862a9db2672b8fba24",
+    "maxActionValueWei": "0",
+    "maxTokenApproval": "0",
+    "rewards": {
+      "protocol": "pepe-arcade/1",
+      "rulesId": "pepe-arcade-run/1",
+      "rulesHash": "0x6a126dc671dbed043943f72f26c072f71bc7095efd3d0affa4ca4cb56bfcace8",
+      "signer": "0x345b9e44dc9ea841ea589fb7e0907139fa687a20",
+      "rewardPerPoint": "1000000000000000000",
+      "hostedOnly": true
+    }
+  }
+}

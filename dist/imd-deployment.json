@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "launchId": "0cc11429-5331-4902-a9f4-0fc6b9ab82ab",
+  "chainId": 1,
+  "sourceCommit": "03131de3c1cbc06b61e1b1361e87aa8a2b5432ac",
+  "attestationHash": "6c973867432617f65c3c6ba0c1b3267fbd164fa8777ad81be6938ffd385c1a47",
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "address": "0x0692a2313f31852b041dd733d89126a714a6fcd1",
+      "abiHash": "f36d2fe28b62f817a4fba0b78bb501b41895eada3982280273c063ad8183f577",
+      "abiPath": "abi/LaunchToken.json"
+    },
+    {
+      "name": "Game",
+      "address": "0x7fa95d111b4cbb5685ead11dee2ecf8a8634fd2c",
+      "abiHash": "3476aa3d42e0f3e0a44c2399a0e1940fb75f2380b169bc0412749e6153d330a2",
+      "abiPath": "abi/Game.json"
+    }
+  ],
+  "assets": [
+    {
+      "path": "abi/Game.json",
+      "sha256": "c20c7995732b7fe6dfdbe5cc651438faac2e1ecd22bbfdcba2da0f62955f550b"
+    },
+    {
+      "path": "abi/LaunchToken.json",
+      "sha256": "c0dab602694964041a5c7124536ce5fe6c9d1d057c2f202b73f659a1e1adb554"
+    },
+    {
+      "path": "assets/barlow-condensed-latin-600-normal-DepVgxBB.woff2",
+      "sha256": "215a93c696f442034a46fbb382958f753fda60e30490683aeea6b235fcbb2b66"
+    },
+    {
+      "path": "assets/barlow-condensed-latin-700-normal-v1xN8_Wq.woff2",
+      "sha256": "3787a5a419171630e6890cfa47c4da067474d005cd0ff8dc11ec090fdc3ee2b8"
+    },
+    {
+      "path": "assets/barlow-condensed-latin-800-normal-BKzMuPgK.woff2",
+      "sha256": "2515494e8cc2ca07c86ea78766cfa104b796aa6ed5d66821c01d51dbb0b52bce"
+    },
+    {
+      "path": "assets/ccip-DlSI6JO_.js",
+      "sha256": "ad7436fd1989edae9943c21fef2fd3cd36d4349ba2afb46ed3e0d37ae2967747"
+    },
+    {
+      "path": "assets/dm-sans-latin-400-normal-CW0RaeGs.woff2",
+      "sha256": "4ab51eb2cd7305d177187908d6397474d4520663f6c6e572feb0a64f4fa80006"
+    },
+    {
+      "path": "assets/dm-sans-latin-500-normal-B9HHJjqV.woff2",
+      "sha256": "19bf1984956517c35c2bd35b6cdedac12a21d6fcd3596c614ecdfb88b648909d"
+    },
+    {
+      "path": "assets/dm-sans-latin-600-normal-Aqo67rzb.woff2",
+      "sha256": "6bb2b2645ba5eeaecf56322c543fa3a75b87b927977b9c03b1dabc4205089120"
+    },
+    {
+      "path": "assets/dm-sans-latin-700-normal-DvUfVpUG.woff2",
+      "sha256": "35c5efa0e5daa52ee5c6500f5be354bf751fb65c4e49e1d6806c6eb5883e8fe9"
+    },
+    {
+      "path": "assets/index-BAHrzjaC.css",
+      "sha256": "02a010ff7de87fa418430f96738b0a444f3365bfa17be68e18cd4894a6624913"
+    },
+    {
+      "path": "assets/index-CZXR9Qxt.js",
+      "sha256": "027360b1979b1396965ec9303bbcc3bd9700b3059ad600f881e4023f960edf50"
+    },
+    {
+      "path": "cover.webp",
+      "sha256": "b5afa957b84a8ef9c18c5d8caa670d619c9f476e29143b3bf9b7cb3123a43a1c"
+    },
+    {
+      "path": "favicon.svg",
+      "sha256": "bf4d1404b3a3ef7ef660d5df8993c4959de75b9f9171f00647279c594de95257"
+    },
+    {
+      "path": "index.html",
+      "sha256": "cea9b6c5ba1747fb73479386e6b2af77619aa3a718c91841a26ecb126b4c770b"
+    },
+    {
+      "path": "licenses/fonts.txt",
+      "sha256": "6a3f6e465d9e026f9b5af16cdc0a33a495e564e83d4fb928847744aebde1fd32"
+    },
+    {
+      "path": "licenses/runtime.txt",
+      "sha256": "6458cc6b2611b4390803e185367e78ed86e259769dc00a67d326063be6f37f4a"
+    },
+    {
+      "path": "pepe-game.json",
+      "sha256": "4ccc8c5ac2bf2e9a48b31154c5f8fc7bb562c5b617f5badd5bb6f97449b9f715"
+    },
+    {
+      "path": "sdk/LICENSE",
+      "sha256": "867fcd21069f023579e0b19ce86d9d04d3d4935ae17c7e876c8aa6537013aadc"
+    },
+    {
+      "path": "sdk/arcade-client.js",
+      "sha256": "0ca68173884af457eab3de17bc1348e586cd4daecde61b9e8d8e76f3b28935c3"
+    },
+    {
+      "path": "sdk/arcade-engine.mjs",
+      "sha256": "6b52ec407f2e9e0f4269d6a0c7e51cb5f48fdacb06c714422e4f5dee9706f932"
+    },
+    {
+      "path": "sdk/onchain-bridge.js",
+      "sha256": "1eb27472c8e5694d3733edd4554dba1e4981a66da0c8f10bb7995f3a3218f9a3"
+    }
+  ],
+  "poolKey": {
+    "fee": 12500,
+    "hooks": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+    "currency0": "0x0692a2313f31852b041dd733d89126a714a6fcd1",
+    "currency1": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "tickSpacing": 60
+  },
+  "network": {
+    "chainId": 1,
+    "name": "Ethereum",
+    "testnet": false,
+    "rpcUrls": [
+      "https://ethereum-rpc.publicnode.com",
+      "https://eth.drpc.org"
+    ],
+    "explorer": "https://etherscan.io",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "faucets": [],
+    "uniswapV4": {
+      "poolManager": "0x000000000004444c5dc75cb358380d2e3de08a90",
+      "universalRouter": "0x66a9893cc07d91d95644aedd05d03f95e1dba8af",
+      "quoter": "0x52f0e24d1c21c8a0cb1e5a5dd6198556bd9e1203",
+      "stateView": "0x7ffe42c4a5deea5b0fec41c94c136cf115597227",
+      "positionManager": "0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e",
+      "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3"
+    },
+    "pairToken": {
+      "address": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+      "symbol": "IMD",
+      "name": "Identity.md",
+      "decimals": 18
+    },
+    "otherPairTokens": [
+      {
+        "id": "fwa",
+        "address": "0xa0df17b5ac76ababa36e1450e2cbcd18a620c845",
+        "symbol": "FWA",
+        "name": "Fake World Assets",
+        "decimals": 18
+      }
+    ]
+  },
+  "walletAddChain": {
+    "chainId": "0x1",
+    "chainName": "Ethereum",
+    "rpcUrls": [
+      "https://ethereum-rpc.publicnode.com",
+      "https://eth.drpc.org"
+    ],
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "blockExplorerUrls": [
+      "https://etherscan.io"
+    ]
+  }
+}

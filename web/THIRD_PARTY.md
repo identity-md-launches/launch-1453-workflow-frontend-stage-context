@@ -1,0 +1,8 @@
+# Provenance and licenses
+
+- Original SKYLINE HEIST Canvas artwork, UI layout, wordmark treatment, icon paths and Web Audio score are authored for this assignment. No stock imagery, external runtime art CDN, AI image generation or copied game character is used.
+- Pepe2Pepe SDK: `adaki2004/pepe2pepe-game-template`, commit `3df067d1ab5c82481f27e9d4e2dc17ecb1ea93aa`, MIT; `public/sdk/LICENSE` is shipped. The engine matches the approved byte hash. `arcade-client.js` is marked with its single local account-read adaptation; the bridge and engine are unchanged.
+- Barlow Condensed and DM Sans: pinned `@fontsource` packages in `package-lock.json`, SIL Open Font License 1.1. License texts are shipped in `public/licenses/fonts.txt`. Only the used Latin WOFF2 weights are exported.
+- React and React DOM: Meta and contributors, MIT. viem: wevm, MIT. Vite, TypeScript, Playwright, axe-core and other development dependencies retain the licenses in their pinned packages; full runtime license notices are also shipped in `public/licenses/runtime.txt`. Dependency archives/node_modules are not included in the submission.
+- Better Interface guidance: Jakub Krehel, MIT, pinned commit `267330e1adfc66a718fb65fa6918c1f06d0a689e`. The documentation method comes from Paul Bakaus / Impeccable, Apache-2.0, commit `9d715cc4f5564a990ca8345abfdd5df6dc9b41c8`. The assignment supplied both guides and licenses; they were consulted rather than fetched or copied wholesale.
+- Ethereum frontend UX guidance: Austin Griffith / ethskills, MIT, pinned commit `06ea4efa08076ff04f6ca4945ef4a2ca881115b0`; the supplied worker adapter governs address sourcing, public RPCs and unavailable USD context.

@@ -1,0 +1,38 @@
+{
+  "browser": "141.0.7390.37",
+  "environment": "Headless Chromium on this worker; not physical phone performance",
+  "viewports": [
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "resultScrolls": true
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "resultScrolls": true
+    },
+    {
+      "width": 760,
+      "scrollWidth": 760,
+      "resultScrolls": true
+    },
+    {
+      "width": 900,
+      "scrollWidth": 900,
+      "resultScrolls": true
+    },
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "resultScrolls": false
+    }
+  ],
+  "framePacing": {
+    "durationMs": 3003.500000023842,
+    "frames": 181,
+    "medianMs": 16.699999999999818,
+    "p95Ms": 16.799999999999955,
+    "maximumMs": 16.800000000000182
+  }
+}

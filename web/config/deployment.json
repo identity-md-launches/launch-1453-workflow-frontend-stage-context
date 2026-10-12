@@ -1,0 +1,61 @@
+{
+  "chainId": 1,
+  "poolKey": {
+    "fee": 12500,
+    "hooks": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+    "currency0": "0x0692a2313f31852b041dd733d89126a714a6fcd1",
+    "currency1": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "tickSpacing": 60
+  },
+  "repoUrl": "https://github.com/identity-md-launches/launch-1445-workflow-contract-stage-context",
+  "version": 1,
+  "launchId": "0cc11429-5331-4902-a9f4-0fc6b9ab82ab",
+  "manifest": {
+    "kind": "evm_project",
+    "pool": {
+      "fee": 12500,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7"
+    },
+    "notes": "SKYLINE HEIST launch: the Skyline Loot (LOOT) launch token and one application contract, Game (src/Game.sol), the pepe2pepe ArcadeRewardVault with the launch policy folded in. src/ArcadeRewardVault.sol is the inherited base, not a separately deployed contract. Game constructor (address creator, address launchToken, address verifier, bytes32 rules): creator is $owner, the launch's owner as the launch section declares it (0x0a5b0e232d47541eb503bc862a9db2672b8fba24, which the approved context labels platform; it names no separate creator wallet, and this manifest invents none). The owner is the vault's only privileged role: it alone can call recoverExpired, only after closesAt, and it is immutable, so the creator's wallet must be the launch owner before deployment; launchToken is $token, the deployed LaunchToken paid as rewards; verifier is the unfunded reward-voucher signer named by the approved workflow context, with no other power; rules is the rulesHash of the approved arcade engine from the same context. Fixed in source: 1 LOOT per verified point, at most 100 points per run, closesAt = deployment time + 365 days (read closesAt() after deployment). The constructor makes no external calls. The vault holds nothing at launch; the owner funds it after launch by a plain LOOT transfer. Entry is free and players pay only gas to claim. The pool pairs with IMD at the launch policy fee; supply and allocations are handled by the factory and are not manifest fields.",
+    "token": {
+      "name": "Skyline Loot",
+      "symbol": "LOOT",
+      "contract": "LaunchToken",
+      "decimals": 18
+    },
+    "contracts": [
+      {
+        "contract": "Game",
+        "constructorArgs": [
+          "$owner",
+          "$token",
+          "0x345b9e44dc9ea841ea589fb7e0907139fa687a20",
+          "0x6a126dc671dbed043943f72f26c072f71bc7095efd3d0affa4ca4cb56bfcace8"
+        ]
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "txHash": "0xe3bb8cecc6988d0f971810e579b3dcce361dd3912f9dfbec8b6bdf54191d0c22",
+      "abiHash": "f36d2fe28b62f817a4fba0b78bb501b41895eada3982280273c063ad8183f577",
+      "address": "0x0692a2313f31852b041dd733d89126a714a6fcd1",
+      "blockNumber": 26178000,
+      "creationCodeHash": "09dbea06fbd7af64860124251bfabba1aa1d5c34d57639cc196ce1238e890134"
+    },
+    {
+      "name": "Game",
+      "txHash": "0xe3bb8cecc6988d0f971810e579b3dcce361dd3912f9dfbec8b6bdf54191d0c22",
+      "abiHash": "3476aa3d42e0f3e0a44c2399a0e1940fb75f2380b169bc0412749e6153d330a2",
+      "address": "0x7fa95d111b4cbb5685ead11dee2ecf8a8634fd2c",
+      "blockNumber": 26178000,
+      "creationCodeHash": "1c1fc6c7cd210b1c8d918f53faeecdc039e7e68cec6187df0beb9652479fe06e"
+    }
+  ],
+  "sourceCommit": "03131de3c1cbc06b61e1b1361e87aa8a2b5432ac",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "6c973867432617f65c3c6ba0c1b3267fbd164fa8777ad81be6938ffd385c1a47"
+}

@@ -1,0 +1,10 @@
+# This file is the explicitly allowed frontend ignore budget.
+node_modules/
+**/node_modules/
+.cache/
+**/.cache/
+.vite/
+**/.vite/
+test-results/
+playwright-report/
+*.tsbuildinfo

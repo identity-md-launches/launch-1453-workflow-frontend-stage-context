@@ -1,0 +1,183 @@
+{
+  "startedAt": "2026-10-12T19:11:09.472Z",
+  "browser": "141.0.7390.37",
+  "kind": "Production static export; sandboxed opaque iframe; mocked wallet/host/RPC. No transactions broadcast.",
+  "tests": [
+    {
+      "name": "standalone: exact hosted link, relative assets, no wallet or query bypass",
+      "passed": true,
+      "durationMs": 376
+    },
+    {
+      "name": "desktop/mobile/320px reflow, 200% text, keyboard focus, contrast and accessibility",
+      "passed": true,
+      "durationMs": 1093
+    },
+    {
+      "name": "real parent handshake required; child/window spoof and query parameters ignored",
+      "passed": true,
+      "durationMs": 245
+    },
+    {
+      "name": "one-shot parent init survives asynchronous deployment loading",
+      "passed": true,
+      "durationMs": 229
+    },
+    {
+      "name": "wrong-channel responses cannot resolve pending wallet authorization",
+      "passed": true,
+      "durationMs": 521
+    },
+    {
+      "name": "review demo runs with zero public RPC or reward-service requests",
+      "passed": true,
+      "durationMs": 775
+    },
+    {
+      "name": "keyboard movement + shots, Escape pause freezes physics, resume, resize and host pause",
+      "passed": true,
+      "durationMs": 2913
+    },
+    {
+      "name": "demo full extraction, loss, retained points and restart use frozen physics",
+      "passed": true,
+      "durationMs": 29263
+    },
+    {
+      "name": "touch: two pointers steer and fire together; cancellation pauses; thumbs below rig",
+      "passed": true,
+      "durationMs": 732
+    },
+    {
+      "name": "settings: focus trap, sound toggle, reduced motion/effects, close returns focus",
+      "passed": true,
+      "durationMs": 542
+    },
+    {
+      "name": "wallet/session rejection returns cleanly to start; no play before authorization",
+      "passed": true,
+      "durationMs": 594
+    },
+    {
+      "name": "funded hosted gameplay uploads one replay; queued result polls, then claim confirms",
+      "passed": true,
+      "durationMs": 19890
+    },
+    {
+      "name": "claim cancellation is recoverable and duplicate clicks stay locked until receipt",
+      "passed": true,
+      "durationMs": 947
+    },
+    {
+      "name": "claims disabled for expired",
+      "passed": true,
+      "durationMs": 500
+    },
+    {
+      "name": "claims disabled for wrong wallet",
+      "passed": true,
+      "durationMs": 503
+    },
+    {
+      "name": "claims disabled for tampered rules",
+      "passed": true,
+      "durationMs": 423
+    },
+    {
+      "name": "claims disabled for wrong chain",
+      "passed": true,
+      "durationMs": 433
+    },
+    {
+      "name": "empty pool blocks new runs but keeps saved-reward recovery available",
+      "passed": true,
+      "durationMs": 453
+    },
+    {
+      "name": "RPC failures fail closed with retry and never request a hosted session",
+      "passed": true,
+      "durationMs": 264
+    },
+    {
+      "name": "signed zero reward resolves without a fake claim or calculated token amount",
+      "passed": true,
+      "durationMs": 505
+    },
+    {
+      "name": "pending transaction uncertainty requires an explicit status check",
+      "passed": true,
+      "durationMs": 847
+    },
+    {
+      "name": "queued verification stops automatically after 60 seconds and offers retry",
+      "passed": true,
+      "durationMs": 24138
+    },
+    {
+      "name": "five-minute session deadline survives pause and expires plainly",
+      "passed": true,
+      "durationMs": 866
+    },
+    {
+      "name": "iframe menu, pause and settings accessibility; prefers-reduced-motion default",
+      "passed": true,
+      "durationMs": 1121
+    }
+  ],
+  "measurements": {
+    "reflow": [
+      {
+        "viewport": 1440,
+        "scroll": 1440
+      },
+      {
+        "viewport": 900,
+        "scroll": 900
+      },
+      {
+        "viewport": 760,
+        "scroll": 760
+      },
+      {
+        "viewport": 390,
+        "scroll": 390
+      },
+      {
+        "viewport": 320,
+        "scroll": 320
+      }
+    ],
+    "landingAxe": [],
+    "colors": [
+      {
+        "name": "Body",
+        "foreground": "rgb(181, 192, 194)",
+        "background": "rgb(11, 20, 27)",
+        "ratio": 9.984455264353842
+      },
+      {
+        "name": "Muted",
+        "foreground": "rgb(139, 157, 165)",
+        "background": "rgb(11, 20, 27)",
+        "ratio": 6.604534279009055
+      },
+      {
+        "name": "Primary",
+        "foreground": "rgb(11, 20, 27)",
+        "background": "rgb(255, 133, 69)",
+        "ratio": 7.692067792525259
+      },
+      {
+        "name": "Card",
+        "foreground": "rgb(181, 192, 194)",
+        "background": "rgb(17, 30, 39)",
+        "ratio": 9.10820895971368
+      }
+    ],
+    "iframeAxe": []
+  },
+  "consoleErrors": [],
+  "finishedAt": "2026-10-12T19:12:37.648Z",
+  "passed": 24,
+  "failed": 0
+}
